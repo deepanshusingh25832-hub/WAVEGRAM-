@@ -1,0 +1,1001 @@
+/* =========================================================
+   WAVEGRAM
+   MESSAGE.CSS
+   MESSAGE PAGE
+========================================================= */
+
+
+/* =========================================================
+   SECTION 1
+   GLOBAL RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    background: #080808;
+
+    color: #ffffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+
+
+body {
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   SECTION 2
+   MESSAGE PAGE
+========================================================= */
+
+.message-page {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100vw;
+    height: 100dvh;
+
+    min-height: 100vh;
+
+    overflow: hidden;
+
+    background: #080808;
+
+    isolation: isolate;
+}
+
+
+/* =========================================================
+   SECTION 3
+   TOP 50PX BAR
+========================================================= */
+
+.message-top-bar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+
+    height: 50px;
+    min-height: 50px;
+    max-height: 50px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #111111 0%,
+            #0c0c0c 100%
+        );
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.055);
+
+    box-shadow:
+        0 2px 8px
+        rgba(0, 0, 0, 0.35);
+
+    z-index: 100;
+}
+
+/* =========================================================
+   SECTION 3A
+   MESSAGE SEARCH 50PX BAR
+========================================================= */
+
+.message-search-bar {
+    position: fixed;
+
+    top: 50px;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+
+    height: 50px;
+    min-height: 50px;
+    max-height: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 10px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #151515 0%,
+            #101010 100%
+        );
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.055);
+
+    box-shadow:
+        0 2px 8px
+        rgba(0, 0, 0, 0.25);
+
+    z-index: 99;
+}
+
+
+/* =========================================================
+   SEARCH BOX
+========================================================= */
+
+.message-search-box {
+    width: 100%;
+    height: 36px;
+
+    display: flex;
+
+    align-items: center;
+
+    background: #080808;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.10);
+
+    border-radius: 9px;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   SEARCH ICON
+========================================================= */
+
+.message-search-icon {
+    flex-shrink: 0;
+
+    width: 19px;
+    height: 19px;
+
+    margin-left: 11px;
+
+    fill: none;
+
+    stroke:
+        rgba(255, 255, 255, 0.58);
+
+    stroke-width: 1.8;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+/* =========================================================
+   SEARCH INPUT
+========================================================= */
+
+.message-search-input {
+    flex: 1;
+
+    width: 100%;
+    height: 100%;
+
+    margin-left: 8px;
+
+    padding: 0 10px 0 0;
+
+    border: 0;
+    outline: none;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 13px;
+}
+
+
+.message-search-input::placeholder {
+    color:
+        rgba(255, 255, 255, 0.42);
+}
+
+
+.message-search-input::-webkit-search-cancel-button {
+    display: none;
+}
+
+/* =========================================================
+   SECTION 4
+   MESSAGE NOTE DP BOX
+========================================================= */
+
+.message-note-box {
+    position: fixed;
+
+    top: 110px;
+    left: 12px;
+
+    width: 68px;
+    height: 68px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    z-index: 20;
+}
+
+
+/* =========================================================
+   NOTE DP WRAPPER
+========================================================= */
+
+.message-note-dp-wrapper {
+    position: relative;
+
+    width: 60px;
+    height: 60px;
+
+    padding: 2px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   NOTE DP
+========================================================= */
+
+.message-note-dp {
+    display: block;
+
+    width: 56px;
+    height: 56px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    background: #151515;
+
+    border:
+        2px solid
+        #080808;
+}
+
+
+/* =========================================================
+   ADD NOTE BUTTON
+========================================================= */
+
+.message-add-note-button {
+    position: absolute;
+
+    right: -2px;
+    bottom: -1px;
+
+    width: 22px;
+    height: 22px;
+
+    padding: 0;
+    margin: 0;
+
+    border:
+        2px solid
+        #080808;
+
+    border-radius: 50%;
+
+    outline: none;
+
+    background: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   PLUS ICON
+========================================================= */
+
+.message-add-note-plus {
+    position: relative;
+
+    width: 10px;
+    height: 10px;
+}
+
+
+.message-add-note-plus::before,
+.message-add-note-plus::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    background: #080808;
+
+    transform:
+        translate(-50%, -50%);
+}
+
+
+.message-add-note-plus::before {
+    width: 10px;
+    height: 2px;
+}
+
+
+.message-add-note-plus::after {
+    width: 2px;
+    height: 10px;
+}
+
+/* =========================================================
+   SECTION 5
+   NOTE DP FULL WIDTH LINE
+========================================================= */
+
+.message-note-box::after {
+    content: "";
+
+    position: fixed;
+
+    top: 190px;
+    left: 0;
+    right: 0;
+
+    width: 100vw;
+    height: 1px;
+
+    background:
+        rgba(255, 255, 255, 0.14);
+
+    z-index: 20;
+}
+
+/* =========================================================
+   SECTION 6
+   MESSAGE TABS
+========================================================= */
+
+.message-tabs {
+    position: fixed;
+
+    top: 189px;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+
+    height: 40px;
+    min-height: 40px;
+    max-height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    background: #0c0c0c;
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.055);
+
+    z-index: 19;
+}
+
+
+/* =========================================================
+   TAB BUTTON
+========================================================= */
+
+.message-tab-button {
+    position: relative;
+
+    width: 50%;
+    height: 40px;
+
+    padding: 0;
+    margin: 0;
+
+    border: 0;
+    outline: none;
+
+    background: transparent;
+
+    color:
+        rgba(255, 255, 255, 0.52);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   ACTIVE TAB
+========================================================= */
+
+.message-tab-button.active {
+    color: #ffffff;
+}
+
+
+.message-tab-button.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 25%;
+    right: 25%;
+
+    bottom: 0;
+
+    height: 2px;
+
+    background: #ffffff;
+
+    border-radius: 2px;
+}
+
+
+/* =========================================================
+   TOUCH FEEDBACK
+========================================================= */
+
+.message-tab-button:active {
+    opacity: 0.7;
+}
+
+/* =========================================================
+   SECTION 7
+   MESSAGE CREATE PLUS BUTTON
+========================================================= */
+
+.message-create-plus-button {
+    position: fixed;
+
+    right: 14px;
+    bottom: 84px;
+
+    width: 42px;
+    height: 42px;
+
+    padding: 0;
+    margin: 0;
+
+    border: 1px solid
+        rgba(255, 255, 255, 0.75);
+
+    border-radius: 8px;
+
+    outline: none;
+
+    background: #111111;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    z-index: 110;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   PLUS ICON
+========================================================= */
+
+.message-create-plus-icon {
+    position: relative;
+
+    width: 18px;
+    height: 18px;
+
+    display: block;
+}
+
+
+.message-create-plus-icon::before,
+.message-create-plus-icon::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    background: #ffffff;
+
+    border-radius: 2px;
+
+    transform:
+        translate(-50%, -50%);
+}
+
+
+.message-create-plus-icon::before {
+    width: 16px;
+    height: 2px;
+}
+
+
+.message-create-plus-icon::after {
+    width: 2px;
+    height: 16px;
+}
+
+
+/* =========================================================
+   TOUCH FEEDBACK
+========================================================= */
+
+.message-create-plus-button:active {
+    transform: scale(0.94);
+}
+
+/* =========================================================
+   SECTION 4A
+   MESSAGE CONTENT
+========================================================= */
+
+.message-content {
+    position: fixed;
+
+    top: 50px;
+    left: 0;
+    right: 0;
+
+    bottom: 80px;
+
+    width: 100%;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    background: #080808;
+
+    scrollbar-width: none;
+
+    -webkit-overflow-scrolling: touch;
+
+    z-index: 10;
+}
+
+
+.message-content::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+
+/* =========================================================
+   SECTION 5
+   BOTTOM EMPTY 40PX BAR
+========================================================= */
+
+.message-bottom-bar {
+    position: fixed;
+
+    left: 0;
+    right: 0;
+
+    bottom: 0;
+
+    width: 100%;
+
+    height: 40px;
+    min-height: 40px;
+    max-height: 40px;
+
+    background: #111111;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    z-index: 100;
+}
+
+
+/* =========================================================
+   SECTION 6
+   BOTTOM NAVIGATION
+========================================================= */
+
+.message-bottom-navigation {
+    position: fixed;
+
+    left: 0;
+    right: 0;
+
+    bottom: 40px;
+
+    width: 100%;
+
+    height: 40px;
+    min-height: 40px;
+    max-height: 40px;
+
+    padding: 0;
+    margin: 0;
+
+    background: #0c0c0c;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    z-index: 101;
+
+    pointer-events: auto;
+}
+
+
+/* =========================================================
+   SECTION 7
+   NAVIGATION BUTTONS
+========================================================= */
+
+.message-bottom-button {
+    position: absolute;
+
+    top: 0;
+
+    width: 20%;
+    height: 40px;
+
+    padding: 0;
+    margin: 0;
+
+    border: 0;
+    outline: none;
+
+    background: transparent;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    transform: none !important;
+
+    transition: none !important;
+
+    pointer-events: auto;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   SECTION 8
+   EXACT ICON POSITIONS
+========================================================= */
+
+#messageNavHome {
+    left: 0%;
+}
+
+
+#messageNavSearch {
+    left: 20%;
+}
+
+
+#messageNavMessage {
+    left: 40%;
+}
+
+
+#messageNavReel {
+    left: 60%;
+}
+
+
+#messageNavProfile {
+    left: 80%;
+}
+
+
+/* =========================================================
+   SECTION 9
+   NAVIGATION ICON
+========================================================= */
+
+.message-nav-svg {
+    width: 21px;
+    height: 21px;
+
+    fill: none;
+
+    stroke:
+        rgba(255, 255, 255, 0.68);
+
+    stroke-width: 1.8;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+    transition:
+        stroke 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+/* =========================================================
+   SECTION 10
+   ACTIVE MESSAGE ICON
+========================================================= */
+
+.message-bottom-button.active
+.message-nav-svg {
+    stroke: #ffffff;
+}
+
+
+/* =========================================================
+   SECTION 11
+   NO TAP MOVEMENT
+========================================================= */
+
+.message-bottom-button:active,
+.message-bottom-button:focus,
+.message-bottom-button:hover {
+    transform: none !important;
+}
+
+
+/* =========================================================
+   SECTION 12
+   SAFE AREA SUPPORT
+========================================================= */
+
+.message-page {
+    padding-top:
+        env(safe-area-inset-top);
+}
+
+
+.message-top-bar {
+    top:
+        env(safe-area-inset-top);
+}
+
+
+.message-content {
+    top:
+        calc(
+            50px +
+            env(safe-area-inset-top)
+        );
+
+    bottom:
+        calc(
+            80px +
+            env(safe-area-inset-bottom)
+        );
+}
+
+
+.message-bottom-bar {
+    bottom:
+        env(safe-area-inset-bottom);
+}
+
+
+.message-bottom-navigation {
+    bottom:
+        calc(
+            40px +
+            env(safe-area-inset-bottom)
+        );
+}
+
+
+/* =========================================================
+   SECTION 13
+   ELEMENT SELECTION CONTROL
+========================================================= */
+
+.message-page,
+.message-page * {
+    -webkit-user-select: none;
+
+    user-select: none;
+
+    -webkit-touch-callout: none;
+}
+
+
+/* =========================================================
+   SECTION 14
+   SMALL MOBILE DEVICES
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .message-top-bar {
+        height: 50px;
+
+        min-height: 50px;
+        max-height: 50px;
+    }
+
+
+    .message-bottom-navigation {
+        height: 40px;
+
+        min-height: 40px;
+        max-height: 40px;
+    }
+
+
+    .message-bottom-bar {
+        height: 40px;
+
+        min-height: 40px;
+        max-height: 40px;
+    }
+
+}
+
+
+/* =========================================================
+   SECTION 15
+   VERY SMALL MOBILE DEVICES
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .message-nav-svg {
+        width: 20px;
+        height: 20px;
+    }
+
+}
+
+
+/* =========================================================
+   SECTION 16
+   TABLET AND LARGE SCREENS
+========================================================= */
+
+@media (min-width: 768px) {
+
+    .message-nav-svg {
+        width: 22px;
+        height: 22px;
+    }
+
+}
+
+
+/* =========================================================
+   SECTION 17
+   LANDSCAPE MOBILE
+========================================================= */
+
+@media (
+    orientation: landscape
+) and (
+    max-height: 500px
+) {
+
+    .message-nav-svg {
+        width: 20px;
+        height: 20px;
+    }
+
+}
+
+
+/* =========================================================
+   SECTION 18
+   FINAL MESSAGE STATE
+========================================================= */
+
+#messagePage {
+    opacity: 1;
+
+    visibility: visible;
+
+    background: #080808;
+}
+
+
+#messageTopBar {
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+#messageContent {
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+#messageBottomBar {
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+#messageBottomNavigation {
+    opacity: 1;
+
+    visibility: visible;
+}

@@ -1,0 +1,1500 @@
+/* =========================================================
+   WAVEGRAM
+   HOME.CSS
+========================================================= */
+
+
+/* =========================================================
+   SECTION 1
+   GLOBAL RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    background: #080808;
+    color: #ffffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+
+
+body {
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   SECTION 2
+   HOME PAGE
+========================================================= */
+
+.home-page {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100vw;
+    height: 100dvh;
+
+    overflow: hidden;
+
+    background: #080808;
+}
+
+
+/* =========================================================
+   SECTION 3
+   TOP 50PX BAR
+========================================================= */
+
+.home-top-bar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+    height: 50px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #111111 0%,
+            #0c0c0c 100%
+        );
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.055);
+
+    box-shadow:
+        0 2px 8px
+        rgba(0, 0, 0, 0.35);
+
+    z-index: 100;
+}
+
+
+/* =========================================================
+   SECTION 4
+   HOME CONTENT
+========================================================= */
+
+.home-content {
+    position: absolute;
+
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: calc(100dvh - 50px);
+
+    overflow: hidden;
+
+    background: #080808;
+}
+
+
+/* =========================================================
+   SECTION 5
+   SECOND 50PX BAR
+========================================================= */
+
+.home-second-bar {
+    position: fixed;
+
+    top: 50px;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            180deg,
+            #151515 0%,
+            #101010 100%
+        );
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.055);
+
+    box-shadow:
+        0 2px 8px
+        rgba(0, 0, 0, 0.30);
+
+    z-index: 99;
+}
+
+
+/* =========================================================
+   SECTION 6
+   WAVEGRAM TITLE
+========================================================= */
+
+.home-title {
+    width: 100%;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   SECTION 7
+   WAVEGRAM WORDMARK
+========================================================= */
+
+.wavegram-wordmark {
+    display: block;
+
+    width: 190px;
+    height: 40px;
+
+    overflow: visible;
+}
+
+
+.wavegram-wordmark text {
+    fill: #ffffff;
+
+    font-family:
+        "Trebuchet MS",
+        Arial,
+        sans-serif;
+
+    font-size: 39px;
+    font-weight: 700;
+
+    letter-spacing: -1px;
+
+    paint-order: stroke fill;
+
+    stroke: #ffffff;
+    stroke-width: 0.35px;
+
+    stroke-linejoin: round;
+
+    text-rendering: geometricPrecision;
+}
+
+
+/* =========================================================
+   SECTION 8
+   STORY DP BOX
+========================================================= */
+
+.user-story-box {
+    position: fixed;
+
+    top: 112px;
+    left: 12px;
+
+    width: 68px;
+    height: 68px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 20;
+}
+
+
+/* =========================================================
+   SECTION 9
+   STORY DP WRAPPER
+========================================================= */
+
+.user-story-dp-wrapper {
+    position: relative;
+
+    width: 60px;
+    height: 60px;
+
+    padding: 2px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff;
+}
+
+
+.user-story-dp {
+    display: block;
+
+    width: 56px;
+    height: 56px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    background: #151515;
+
+    border:
+        2px solid
+        #080808;
+}
+
+
+/* =========================================================
+   SECTION 10
+   ADD STORY BUTTON
+========================================================= */
+
+.add-story-button {
+    position: absolute;
+
+    right: -2px;
+    bottom: -1px;
+
+    width: 22px;
+    height: 22px;
+
+    padding: 0;
+    margin: 0;
+
+    border:
+        2px solid
+        #080808;
+
+    border-radius: 50%;
+
+    outline: none;
+
+    background: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+
+.add-story-plus {
+    position: relative;
+
+    width: 10px;
+    height: 10px;
+}
+
+
+.add-story-plus::before,
+.add-story-plus::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    background: #080808;
+
+    transform:
+        translate(-50%, -50%);
+}
+
+
+.add-story-plus::before {
+    width: 10px;
+    height: 2px;
+}
+
+
+.add-story-plus::after {
+    width: 2px;
+    height: 10px;
+}
+
+
+/* =========================================================
+   SECTION 11
+   STORY LINE
+========================================================= */
+
+.user-story-box::after {
+    content: "";
+
+    position: fixed;
+
+    top: 190px;
+    left: 0;
+    right: 0;
+
+    width: 100vw;
+    height: 1px;
+
+    background:
+        rgba(255, 255, 255, 0.14);
+
+    z-index: 20;
+}
+
+
+/* =========================================================
+   SECTION 12
+   HOME POST FEED
+========================================================= */
+
+.home-post-feed {
+    position: fixed;
+
+    top: 191px;
+    left: 0;
+    right: 0;
+    bottom: 80px;
+
+    width: 100%;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    padding:
+        10px 10px 30px 10px;
+
+    background: #080808;
+
+    scrollbar-width: none;
+
+    -webkit-overflow-scrolling: touch;
+
+    overscroll-behavior-y: auto;
+
+    scroll-behavior: smooth;
+
+    z-index: 10;
+}
+
+
+.home-post-feed::-webkit-scrollbar {
+    display: none;
+
+    width: 0;
+    height: 0;
+}
+
+
+/* =========================================================
+   SECTION 13
+   POST CARD
+========================================================= */
+
+.home-post-card {
+    position: relative;
+
+    width: 100%;
+
+    margin:
+        0 auto 16px auto;
+
+    overflow: hidden;
+
+    background: #101010;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.14);
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 3px 14px
+        rgba(0, 0, 0, 0.45);
+}
+
+
+.home-post-card:last-child {
+    margin-bottom: 30px;
+}
+
+
+/* =========================================================
+   SECTION 14
+   POST HEADER
+========================================================= */
+
+.home-post-header {
+    position: relative;
+
+    width: 100%;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+
+    padding:
+        0 12px;
+
+    background: #101010;
+}
+
+
+.home-post-user-dp {
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    background: #181818;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.18);
+}
+
+
+.home-post-user-info {
+    flex: 1;
+
+    min-width: 0;
+
+    margin-left: 10px;
+}
+
+
+.home-post-username {
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* =========================================================
+   SECTION 15
+   MORE BUTTON
+========================================================= */
+
+.home-post-more-button {
+    position: relative;
+
+    width: 38px;
+    height: 44px;
+
+    padding: 0;
+    margin: 0;
+
+    border: 0;
+    outline: none;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    font-size: 25px;
+    line-height: 1;
+
+    z-index: 20;
+}
+
+
+/* =========================================================
+   SECTION 16
+   POST MEDIA BOX
+========================================================= */
+
+.home-post-media-box {
+    position: relative;
+
+    width: 100%;
+
+    height: auto;
+    min-height: 0;
+
+    overflow: hidden;
+
+    background: #050505;
+
+    display: block;
+
+    padding: 0;
+    margin: 0;
+}
+
+
+/* =========================================================
+   SECTION 17
+   POST IMAGE
+========================================================= */
+
+.home-post-media {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    min-width: 0;
+    min-height: 0;
+
+    max-width: 100%;
+    max-height: none;
+
+    object-fit: contain;
+    object-position: center;
+
+    background: #050505;
+
+    margin: 0;
+    padding: 0;
+
+    border: 0;
+}
+
+
+/* =========================================================
+   SECTION 18
+   REEL MEDIA
+========================================================= */
+
+.home-post-card.reel-card
+.home-post-media-box {
+    height:
+        min(
+            560px,
+            calc(100vw * 1.7778)
+        );
+
+    aspect-ratio: 9 / 16;
+
+    max-height: 560px;
+}
+
+
+.home-post-card.reel-card
+.home-post-media {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   SECTION 19
+   POST ACTION BAR
+========================================================= */
+
+.home-post-action-bar {
+    width: 100%;
+    height: 54px;
+
+    padding: 0 10px;
+
+    display: flex;
+    align-items: center;
+
+    background: #101010;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.035);
+
+    gap: 14px;
+}
+
+
+/* =========================================================
+   ACTION BUTTON
+========================================================= */
+
+.home-post-action-button {
+    height: 42px;
+
+    padding: 0 4px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    border: 0;
+    outline: none;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   ACTION ICON
+========================================================= */
+
+.home-post-action-button svg {
+    width: 28px;
+    height: 28px;
+
+    display: block;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   ACTION COUNT
+========================================================= */
+
+.home-post-action-count {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    line-height: 1;
+
+    min-width: 8px;
+}
+
+
+/* =========================================================
+   SAVE BUTTON
+========================================================= */
+
+.home-post-save-button {
+    margin-left: auto;
+}
+
+
+/* =========================================================
+   BUTTON TAP
+========================================================= */
+
+.home-post-action-button:active {
+    transform: scale(0.94);
+
+    opacity: 0.75;
+}
+
+
+/* =========================================================
+   SECTION 20
+   ACTION BUTTON
+========================================================= */
+
+.home-post-action-button {
+    position: relative;
+
+    width: 44px;
+    height: 44px;
+
+    flex-shrink: 0;
+
+    padding: 0;
+    margin: 0;
+
+    border: 0;
+    outline: none;
+
+    background: transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   SECTION 21
+   ACTION SVG
+========================================================= */
+
+.home-post-action-svg {
+    display: block;
+
+    width: 23px;
+    height: 23px;
+
+    fill: none !important;
+
+    stroke:
+        rgba(255, 255, 255, 0.92) !important;
+
+    stroke-width: 1.8;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+    overflow: visible;
+
+    transition:
+        transform 0.15s ease,
+        stroke 0.15s ease;
+}
+
+
+/* =========================================================
+   SECTION 22
+   LIKE
+========================================================= */
+
+.like-svg {
+    width: 24px;
+    height: 24px;
+
+    fill: none !important;
+
+    stroke:
+        #ffffff !important;
+
+    stroke-width: 1.8;
+}
+
+
+/* =========================================================
+   SECTION 23
+   COMMENT
+========================================================= */
+
+#homePostCommentButton
+.home-post-action-svg {
+    width: 23px;
+    height: 23px;
+
+    fill: none !important;
+
+    stroke:
+        #ffffff !important;
+}
+
+
+/* =========================================================
+   SECTION 24
+   SHARE
+========================================================= */
+
+#homePostShareButton
+.home-post-action-svg {
+    width: 24px;
+    height: 24px;
+
+    fill: none !important;
+
+    stroke:
+        #ffffff !important;
+
+    stroke-width: 1.8;
+}
+
+
+/* =========================================================
+   SECTION 25
+   SAVE
+========================================================= */
+
+.home-post-save-button {
+    margin-left: auto;
+}
+
+
+.home-post-save-button
+.home-post-action-svg {
+    width: 23px;
+    height: 23px;
+
+    fill: none !important;
+
+    stroke:
+        #ffffff !important;
+
+    stroke-width: 1.8;
+}
+
+
+/* =========================================================
+   SECTION 26
+   ACTION TAP
+========================================================= */
+
+.home-post-action-button:active
+.home-post-action-svg {
+    transform: scale(0.86);
+
+    stroke: #ffffff !important;
+}
+
+/* =========================================================
+   SECTION 28
+   POST CAPTION
+========================================================= */
+
+.home-post-caption {
+    width: 100%;
+
+    padding:
+        0 13px 7px 13px;
+
+    color:
+        rgba(255, 255, 255, 0.88);
+
+    font-size: 13px;
+
+    line-height: 19px;
+}
+
+
+.home-post-caption-username {
+    margin-right: 5px;
+
+    color: #ffffff;
+
+    font-weight: 700;
+}
+
+
+.home-post-caption-text {
+    color:
+        rgba(255, 255, 255, 0.82);
+}
+
+
+/* =========================================================
+   SECTION 29
+   POST TIME
+========================================================= */
+
+.home-post-time {
+    width: 100%;
+
+    padding:
+        0 13px 11px 13px;
+
+    color:
+        rgba(255, 255, 255, 0.38);
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   SECTION 30
+   VIDEO
+========================================================= */
+
+.home-post-media-box video {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    background: #050505;
+}
+
+
+/* =========================================================
+   SECTION 31
+   MORE OPTIONS OVERLAY
+========================================================= */
+
+.home-post-options-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: none;
+
+    background:
+        rgba(0, 0, 0, 0.01);
+
+    z-index: 490;
+
+    pointer-events: none;
+}
+
+
+.home-post-options-overlay.show {
+    display: block !important;
+
+    pointer-events: auto;
+}
+
+
+/* =========================================================
+   SECTION 32
+   OPTIONS POPUP
+========================================================= */
+
+.home-post-options-popup {
+    position: fixed !important;
+
+    top: 15;
+    left: 0;
+
+    width: 190px;
+    max-width: 190px;
+
+    margin: 0;
+    padding: 5px 0;
+
+    background: #151515;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.14);
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 6px 24px
+        rgba(0, 0, 0, 0.55);
+
+    overflow: hidden;
+
+    display: none;
+
+    z-index: 9999;
+}
+
+
+.home-post-options-popup.show {
+    display: block;
+
+    animation:
+        homePostPopupOpen
+        0.14s
+        ease-out;
+}
+
+
+/* =========================================================
+   POPUP ANIMATION
+========================================================= */
+
+@keyframes homePostPopupOpen {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(-5px)
+            scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+
+/* =========================================================
+   SECTION 33
+   POPUP BUTTON
+========================================================= */
+
+.home-post-option-button {
+    width: 100%;
+    height: 40px;
+
+    padding:
+        0 14px;
+
+    border: 0;
+    outline: none;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+.home-post-option-button:active {
+    background: #242424;
+}
+
+
+/* =========================================================
+   SECTION 34
+   OPTION DIVIDER
+========================================================= */
+
+.home-post-option-divider {
+    width: 100%;
+    height: 1px;
+
+    background:
+        rgba(255, 255, 255, 0.07);
+}
+
+
+/* =========================================================
+   SECTION 35
+   DELETE OPTION
+========================================================= */
+
+.home-post-option-button.delete-option,
+.home-post-option-delete {
+    color: #ff5c5c;
+}
+
+
+.home-post-option-button.delete-option:active,
+.home-post-option-delete:active {
+    background:
+        rgba(255, 92, 92, 0.10);
+}
+
+
+/* =========================================================
+   SECTION 36
+   HIDDEN LIKE
+========================================================= */
+
+.home-post-like-button-hidden {
+    display: none !important;
+}
+
+
+/* =========================================================
+   SECTION 37
+   HIDDEN COMMENT
+========================================================= */
+
+.home-post-comment-button-hidden {
+    display: none !important;
+}
+
+
+/* =========================================================
+   SECTION 38
+   HIDDEN SHARE
+========================================================= */
+
+.home-post-share-button-hidden {
+    display: none !important;
+}
+
+
+/* =========================================================
+   SECTION 39
+   ACTION HIDDEN
+========================================================= */
+
+.home-post-action-bar.action-hidden {
+    display: none !important;
+}
+
+
+/* =========================================================
+   SECTION 40
+   LIKE COUNT HIDDEN
+========================================================= */
+
+.home-post-like-count.action-hidden {
+    display: none !important;
+}
+
+
+/* =========================================================
+   SECTION 41
+   COMMENT SECTION HIDDEN
+========================================================= */
+
+.home-post-comment-section.action-hidden {
+    display: none !important;
+}
+
+
+/* =========================================================
+   SECTION 42
+   SAVE ACTIVE
+========================================================= */
+
+.home-post-save-button.saved
+.home-post-action-svg {
+    fill: #ffffff !important;
+
+    stroke: #ffffff !important;
+}
+
+
+/* =========================================================
+   SECTION 43
+   POPUP CLOSE
+========================================================= */
+
+.home-post-options-close {
+    width: 100%;
+    height: 40px;
+
+    margin-top: 0;
+
+    padding:
+        0 14px;
+
+    border: 0;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    outline: none;
+
+    background: transparent;
+
+    color:
+        rgba(255, 255, 255, 0.60);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+.home-post-options-close:active {
+    background: #242424;
+}
+
+
+/* =========================================================
+   SECTION 44
+   POST TOUCH FEEDBACK
+========================================================= */
+
+.home-post-action-button:active,
+.home-post-more-button:active {
+    opacity: 0.65;
+}
+
+
+/* =========================================================
+   SECTION 45
+   HOME BOTTOM EMPTY BAR
+========================================================= */
+
+.home-bottom-bar {
+    position: fixed;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 40px;
+
+    background: #111111;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    z-index: 100;
+}
+
+
+/* =========================================================
+   SECTION 46
+   HOME BOTTOM NAVIGATION
+========================================================= */
+
+.home-bottom-navigation {
+    position: fixed;
+
+    left: 0;
+    right: 0;
+    bottom: 40px;
+
+    width: 100%;
+    height: 40px;
+
+    padding: 0;
+    margin: 0;
+
+    background: #0c0c0c;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    z-index: 101;
+}
+
+
+/* =========================================================
+   SECTION 47
+   NAVIGATION BUTTONS
+========================================================= */
+
+.home-bottom-button {
+    position: absolute;
+
+    top: 0;
+
+    width: 20%;
+    height: 40px;
+
+    padding: 0;
+    margin: 0;
+
+    border: 0;
+    outline: none;
+
+    background: transparent;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    transform: none !important;
+
+    transition: none !important;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+#homeNavHome {
+    left: 0%;
+}
+
+
+#homeNavSearch {
+    left: 20%;
+}
+
+
+#homeNavMessage {
+    left: 40%;
+}
+
+
+#homeNavReel {
+    left: 60%;
+}
+
+
+#homeNavProfile {
+    left: 80%;
+}
+
+
+.home-bottom-button:active,
+.home-bottom-button:focus,
+.home-bottom-button:hover {
+    transform: none !important;
+}
+
+
+/* =========================================================
+   SECTION 48
+   NAVIGATION SVG
+========================================================= */
+
+.home-nav-svg {
+    width: 21px;
+    height: 21px;
+
+    fill: none;
+
+    stroke:
+        rgba(255, 255, 255, 0.68);
+
+    stroke-width: 1.8;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+    transition:
+        stroke 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.home-bottom-button.active
+.home-nav-svg {
+    stroke: #ffffff;
+}
+
+
+/* =========================================================
+   SECTION 49
+   SAFE AREA
+========================================================= */
+
+.home-bottom-bar,
+.home-bottom-navigation {
+    padding-bottom:
+        env(safe-area-inset-bottom);
+}
+
+
+/* =========================================================
+   SECTION 50
+   SMALL DEVICES
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .home-post-feed {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+
+    .home-post-card {
+        border-radius: 12px;
+    }
+
+
+    .home-post-header {
+        height: 54px;
+    }
+
+
+    .home-post-user-dp {
+        width: 36px;
+        height: 36px;
+    }
+
+
+    .home-post-action-bar {
+        height: 50px;
+    }
+
+
+    .home-bottom-navigation {
+        height: 40px;
+    }
+
+
+    .home-bottom-button {
+        height: 40px;
+    }
+
+
+    .home-nav-svg {
+        width: 20px;
+        height: 20px;
+    }
+
+
+    .home-post-options-popup {
+        top: 46px;
+        right: 6px;
+
+        width: 180px;
+        max-width: 180px;
+
+        border-radius: 9px;
+    }
+
+
+    .home-post-option-button,
+    .home-post-options-close {
+        height: 38px;
+        min-height: 38px;
+
+        font-size: 12.5px;
+    }
+
+}

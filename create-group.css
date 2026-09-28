@@ -1,0 +1,948 @@
+/* =========================================================
+   WAVEGRAM
+   CREATE-GROUP.CSS
+========================================================= */
+
+
+/* =========================================================
+   SECTION 1
+   GLOBAL RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    background: #080808;
+    color: #ffffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+
+
+body {
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   SECTION 2
+   CREATE GROUP PAGE
+========================================================= */
+
+.create-group-page {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100vw;
+    height: 100dvh;
+
+    min-height: 100vh;
+
+    overflow: hidden;
+
+    background: #080808;
+}
+
+
+/* =========================================================
+   SECTION 3
+   TOP 50PX BAR
+========================================================= */
+
+.create-group-top-bar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+
+    height: 50px;
+    min-height: 50px;
+    max-height: 50px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #111111 0%,
+            #0c0c0c 100%
+        );
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.055);
+
+    box-shadow:
+        0 2px 8px
+        rgba(0, 0, 0, 0.35);
+
+    z-index: 100;
+}
+
+
+/* =========================================================
+   SECTION 4
+   SECOND 50PX BAR
+========================================================= */
+
+.create-group-second-bar {
+    position: fixed;
+
+    top: 50px;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+
+    height: 50px;
+    min-height: 50px;
+    max-height: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    background:
+        linear-gradient(
+            180deg,
+            #151515 0%,
+            #101010 100%
+        );
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.055);
+
+    box-shadow:
+        0 2px 8px
+        rgba(0, 0, 0, 0.30);
+
+    z-index: 99;
+}
+
+
+/* =========================================================
+   SECTION 5
+   BACK BUTTON
+========================================================= */
+
+.create-group-back-button {
+    width: 50px;
+    height: 50px;
+
+    flex-shrink: 0;
+
+    padding: 0;
+    margin: 0;
+
+    border: 0;
+    outline: none;
+
+    background: transparent;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+.create-group-back-icon {
+    width: 23px;
+    height: 23px;
+
+    fill: none;
+
+    stroke:
+        rgba(255, 255, 255, 0.88);
+
+    stroke-width: 2;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+.create-group-back-button:active
+.create-group-back-icon {
+    transform: scale(0.88);
+}
+
+
+/* =========================================================
+   SECTION 6
+   CREATE GROUP TITLE
+========================================================= */
+
+.create-group-title {
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    color: #ffffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.3px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   SECTION 7
+   CREATE GROUP CONTENT
+========================================================= */
+
+.create-group-content {
+    position: fixed;
+
+    top: 100px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+
+    height:
+        calc(
+            100dvh - 100px
+        );
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    background: #080808;
+
+    scrollbar-width: none;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+
+.create-group-content::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+
+/* =========================================================
+   SECTION 8
+   GIF BOX
+========================================================= */
+
+.create-group-gif-box {
+    position: fixed;
+
+    top: 160px;
+    left: 12px;
+    right: 12px;
+
+    width: auto;
+    height: 120px;
+
+    padding: 0;
+
+    overflow: hidden;
+
+    background: #101010;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.16);
+
+    border-radius: 10px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    z-index: 20;
+}
+
+
+/* =========================================================
+   SELECTED GIF
+========================================================= */
+
+.create-group-selected-gif {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    min-width: 0;
+    min-height: 0;
+
+    max-width: 100%;
+    max-height: 100%;
+
+    object-fit: cover;
+
+    border: 0;
+
+    border-radius: 9px;
+
+    background: #101010;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   SECTION 9
+   GIF PLACEHOLDER
+========================================================= */
+
+.create-group-gif-placeholder {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 9px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #151515 0%,
+            #0d0d0d 100%
+        );
+
+    border: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color:
+        rgba(255, 255, 255, 0.35);
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   SECTION 10
+   SELECT GIF BUTTON
+========================================================= */
+
+.create-group-gif-action {
+    position: fixed;
+
+    top: 285px;
+    left: 12px;
+    right: 12px;
+
+    width: auto;
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    z-index: 21;
+}
+
+
+.select-gif-button {
+    width: 100%;
+    height: 40px;
+
+    padding: 0 16px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.16);
+
+    border-radius: 8px;
+
+    outline: none;
+
+    background: #151515;
+
+    color: #ffffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.2px;
+
+    cursor: pointer;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+.select-gif-button:active {
+    background: #202020;
+
+    transform: scale(0.98);
+}
+
+
+/* =========================================================
+   SECTION 11
+   GROUP PROFILE DP
+========================================================= */
+
+.create-group-dp-box {
+    position: fixed;
+
+    top: 335px;
+    left: 14px;
+
+    width: 72px;
+    height: 72px;
+
+    background: #111111;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.12);
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    z-index: 22;
+}
+
+
+.create-group-dp {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    background: #151515;
+}
+
+
+/* =========================================================
+   SECTION 12
+   GROUP DP + GROUP NAME
+========================================================= */
+
+.create-group-details {
+    position: fixed;
+
+    top: 335px;
+    left: 100px;
+    right: 14px;
+
+    height: 72px;
+
+    z-index: 23;
+}
+
+
+/* =========================================================
+   SELECT DP BUTTON
+========================================================= */
+
+.select-dp-button {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 34px;
+
+    padding: 0 12px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.16);
+
+    border-radius: 7px;
+
+    outline: none;
+
+    background: #151515;
+
+    color: #ffffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+.select-dp-button:active {
+    background: #202020;
+
+    transform: scale(0.98);
+}
+
+
+/* =========================================================
+   GROUP NAME BOX
+========================================================= */
+
+.create-group-name-box {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 30px;
+}
+
+
+/* =========================================================
+   GROUP NAME INPUT
+========================================================= */
+
+.group-name-input {
+    width: 100%;
+    height: 30px;
+
+    padding: 0 10px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.14);
+
+    border-radius: 7px;
+
+    outline: none;
+
+    background: #101010;
+
+    color: #ffffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 400;
+
+    caret-color: #ffffff;
+}
+
+
+.group-name-input::placeholder {
+    color:
+        rgba(255, 255, 255, 0.38);
+}
+
+
+.group-name-input:focus {
+    border-color:
+        rgba(255, 255, 255, 0.30);
+}
+
+
+/* =========================================================
+   SECTION 13
+   GROUP BIO BOX
+========================================================= */
+
+.create-group-bio-box {
+    position: fixed;
+
+    top: 417px;
+    left: 14px;
+    right: 14px;
+
+    width: auto;
+    height: 80px;
+
+    z-index: 23;
+}
+
+
+.group-bio-input {
+    display: block;
+
+    width: 100%;
+    height: 80px;
+
+    padding: 10px 12px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.14);
+
+    border-radius: 8px;
+
+    outline: none;
+
+    resize: none;
+
+    overflow-y: auto;
+
+    background: #101010;
+
+    color: #ffffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 400;
+
+    line-height: 18px;
+
+    caret-color: #ffffff;
+}
+
+
+.group-bio-input::placeholder {
+    color:
+        rgba(255, 255, 255, 0.38);
+}
+
+
+.group-bio-input:focus {
+    border-color:
+        rgba(255, 255, 255, 0.30);
+}
+
+
+.group-bio-input::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+
+.group-bio-input {
+    scrollbar-width: none;
+}
+
+
+/* =========================================================
+   SECTION 14
+   CANCEL + CREATE BUTTONS
+========================================================= */
+
+.create-group-action-buttons {
+    position: fixed;
+
+    top: 507px;
+    left: 14px;
+    right: 14px;
+
+    width: auto;
+    height: 40px;
+
+    display: flex;
+
+    gap: 8px;
+
+    z-index: 24;
+}
+
+
+.create-group-button {
+    flex: 1;
+
+    height: 40px;
+
+    padding: 0 12px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.14);
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   SECTION 15
+   CANCEL BUTTON
+========================================================= */
+
+.cancel-create-group-button {
+    background: #151515;
+
+    color:
+        rgba(255, 255, 255, 0.78);
+}
+
+
+.cancel-create-group-button:active {
+    background: #202020;
+
+    transform: scale(0.98);
+}
+
+
+/* =========================================================
+   SECTION 16
+   CREATE BUTTON
+========================================================= */
+
+.create-group-submit-button {
+    background: #ffffff;
+
+    color: #080808;
+
+    border-color: #ffffff;
+}
+
+
+.create-group-submit-button:active {
+    background: #dddddd;
+
+    transform: scale(0.98);
+}
+
+
+/* =========================================================
+   SECTION 18
+   CANCEL + CREATE BUTTONS
+========================================================= */
+
+.create-group-action-buttons {
+    position: fixed;
+
+    top: 522px;
+    left: 14px;
+    right: 14px;
+
+    width: auto;
+    height: 40px;
+
+    display: flex;
+
+    gap: 8px;
+
+    z-index: 24;
+}
+
+
+.create-group-button {
+    flex: 1;
+
+    height: 40px;
+
+    padding: 0 12px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.14);
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   SECTION 19
+   CANCEL
+========================================================= */
+
+.cancel-create-group-button {
+    background: #151515;
+
+    color:
+        rgba(255, 255, 255, 0.78);
+}
+
+
+.cancel-create-group-button:active {
+    background: #202020;
+
+    transform: scale(0.98);
+}
+
+
+/* =========================================================
+   SECTION 20
+   CREATE
+========================================================= */
+
+.create-group-submit-button {
+    background: #ffffff;
+
+    color: #080808;
+
+    border-color: #ffffff;
+}
+
+
+.create-group-submit-button:active {
+    background: #dddddd;
+
+    transform: scale(0.98);
+}
+
+
+/* =========================================================
+   SECTION 21
+   TEXT SELECTION CONTROL
+========================================================= */
+
+.create-group-page,
+.create-group-page * {
+    -webkit-user-select: none;
+
+    user-select: none;
+
+    -webkit-touch-callout: none;
+}
+
+
+/* =========================================================
+   SECTION 22
+   MOBILE ADJUSTMENT
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .create-group-back-button {
+        width: 50px;
+        height: 50px;
+    }
+
+
+    .create-group-back-icon {
+        width: 23px;
+        height: 23px;
+    }
+
+
+    .create-group-title {
+        font-size: 16px;
+    }
+
+}
+
+
+/* =========================================================
+   SECTION 23
+   VERY SMALL DEVICES
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .create-group-title {
+        font-size: 15px;
+    }
+
+
+    .create-group-back-icon {
+        width: 22px;
+        height: 22px;
+    }
+
+}
+
+
+/* =========================================================
+   SECTION 24
+   FINAL PAGE STATE
+========================================================= */
+
+#createGroupPage {
+    opacity: 1;
+    visibility: visible;
+    background: #080808;
+}

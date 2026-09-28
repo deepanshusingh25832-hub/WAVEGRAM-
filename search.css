@@ -1,0 +1,673 @@
+/* =========================================================
+   WAVEGRAM
+   SEARCH.CSS
+========================================================= */
+
+
+/* =========================================================
+   SECTION 1
+   GLOBAL RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    background: #080808;
+
+    color: #ffffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+
+
+body {
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   SECTION 2
+   SEARCH PAGE
+========================================================= */
+
+.search-page {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100vw;
+    height: 100dvh;
+
+    min-height: 100vh;
+
+    overflow: hidden;
+
+    background: #080808;
+}
+
+
+/* =========================================================
+   SECTION 3
+   TOP 50PX BAR
+========================================================= */
+
+.search-top-bar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+
+    height: 50px;
+    min-height: 50px;
+    max-height: 50px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #111111 0%,
+            #0c0c0c 100%
+        );
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.055);
+
+    box-shadow:
+        0 2px 8px
+        rgba(0, 0, 0, 0.35);
+
+    z-index: 100;
+}
+
+
+/* =========================================================
+   SECTION 4
+   SECOND 50PX BAR
+========================================================= */
+
+.search-second-bar {
+    position: fixed;
+
+    top: 50px;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+
+    height: 50px;
+    min-height: 50px;
+    max-height: 50px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            180deg,
+            #151515 0%,
+            #101010 100%
+        );
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.055);
+
+    box-shadow:
+        0 2px 8px
+        rgba(0, 0, 0, 0.30);
+
+    z-index: 99;
+}
+
+
+/* =========================================================
+   SECTION 5
+   SEARCH BOX
+========================================================= */
+
+.search-box {
+    position: relative;
+
+    width: calc(100% - 24px);
+    height: 36px;
+
+    display: flex;
+
+    align-items: center;
+
+    background: #1a1a1a;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+
+.search-box-icon {
+    flex-shrink: 0;
+
+    width: 19px;
+    height: 19px;
+
+    margin-left: 11px;
+
+    fill: none;
+
+    stroke:
+        rgba(255, 255, 255, 0.60);
+
+    stroke-width: 1.8;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+.search-input {
+    flex: 1;
+
+    min-width: 0;
+
+    height: 100%;
+
+    padding:
+        0 12px 0 9px;
+
+    border: 0;
+    outline: none;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 400;
+}
+
+
+.search-input::placeholder {
+    color:
+        rgba(255, 255, 255, 0.45);
+}
+
+
+.search-input:focus {
+    outline: none;
+}
+
+
+.search-input::-webkit-search-cancel-button {
+    display: none;
+}
+
+
+.search-input::-webkit-search-decoration {
+    display: none;
+}
+
+
+/* =========================================================
+   SECTION 6
+   SEARCH CONTENT
+========================================================= */
+
+.search-content {
+    position: fixed;
+
+    top: 100px;
+    left: 0;
+    right: 0;
+
+    bottom: 80px;
+
+    width: 100%;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    background: #080808;
+
+    scrollbar-width: none;
+
+    -webkit-overflow-scrolling: touch;
+
+    z-index: 10;
+}
+
+
+.search-content::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+
+/* =========================================================
+   SECTION 7
+   BOTTOM EMPTY 40PX BAR
+========================================================= */
+
+.search-bottom-bar {
+    position: fixed;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+
+    height: 40px;
+    min-height: 40px;
+    max-height: 40px;
+
+    background: #111111;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    z-index: 100;
+}
+
+
+/* =========================================================
+   SECTION 8
+   BOTTOM NAVIGATION
+========================================================= */
+
+.search-bottom-navigation {
+    position: fixed;
+
+    left: 0;
+    right: 0;
+
+    bottom: 40px;
+
+    width: 100%;
+
+    height: 40px;
+    min-height: 40px;
+    max-height: 40px;
+
+    padding: 0;
+    margin: 0;
+
+    background: #0c0c0c;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    z-index: 101;
+}
+
+
+/* =========================================================
+   SECTION 9
+   NAVIGATION BUTTONS
+========================================================= */
+
+.search-bottom-button {
+    position: absolute;
+
+    top: 0;
+
+    width: 20%;
+    height: 40px;
+
+    padding: 0;
+    margin: 0;
+
+    border: 0;
+    outline: none;
+
+    background: transparent;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    transform: none !important;
+
+    transition: none !important;
+
+    cursor: pointer;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   SECTION 10
+   EXACT NAVIGATION POSITIONS
+========================================================= */
+
+#searchNavHome {
+    left: 0%;
+}
+
+
+#searchNavSearch {
+    left: 20%;
+}
+
+
+#searchNavMessage {
+    left: 40%;
+}
+
+
+#searchNavReel {
+    left: 60%;
+}
+
+
+#searchNavProfile {
+    left: 80%;
+}
+
+
+/* =========================================================
+   SECTION 11
+   NO TAP MOVEMENT
+========================================================= */
+
+.search-bottom-button:active,
+.search-bottom-button:focus,
+.search-bottom-button:hover {
+    transform: none !important;
+}
+
+
+/* =========================================================
+   SECTION 12
+   NAVIGATION SVG ICONS
+========================================================= */
+
+.search-nav-svg {
+    width: 21px;
+    height: 21px;
+
+    fill: none;
+
+    stroke:
+        rgba(255, 255, 255, 0.68);
+
+    stroke-width: 1.8;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+    transition:
+        stroke 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+/* =========================================================
+   SECTION 13
+   ACTIVE SEARCH ICON
+========================================================= */
+
+.search-bottom-button.active
+.search-nav-svg {
+    stroke: #ffffff;
+}
+
+
+/* =========================================================
+   SECTION 14
+   SAFE AREA SUPPORT
+========================================================= */
+
+.search-page {
+    padding-top:
+        env(safe-area-inset-top);
+}
+
+
+.search-top-bar {
+    top:
+        env(safe-area-inset-top);
+}
+
+
+.search-second-bar {
+    top:
+        calc(
+            50px +
+            env(safe-area-inset-top)
+        );
+}
+
+
+.search-content {
+    top:
+        calc(
+            100px +
+            env(safe-area-inset-top)
+        );
+
+    bottom:
+        calc(
+            80px +
+            env(safe-area-inset-bottom)
+        );
+}
+
+
+.search-bottom-navigation {
+    bottom:
+        calc(
+            40px +
+            env(safe-area-inset-bottom)
+        );
+}
+
+
+.search-bottom-bar {
+    bottom:
+        env(safe-area-inset-bottom);
+}
+
+
+/* =========================================================
+   SECTION 15
+   ELEMENT SELECTION CONTROL
+========================================================= */
+
+.search-page,
+.search-page * {
+    -webkit-user-select: none;
+
+    user-select: none;
+
+    -webkit-touch-callout: none;
+}
+
+
+/* =========================================================
+   SECTION 16
+   SMALL MOBILE DEVICES
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .search-top-bar {
+        height: 50px;
+
+        min-height: 50px;
+        max-height: 50px;
+    }
+
+
+    .search-second-bar {
+        height: 50px;
+
+        min-height: 50px;
+        max-height: 50px;
+    }
+
+
+    .search-title {
+        font-size: 18px;
+    }
+
+
+    .search-bottom-bar {
+        height: 40px;
+
+        min-height: 40px;
+        max-height: 40px;
+    }
+
+
+    .search-bottom-navigation {
+        height: 40px;
+
+        min-height: 40px;
+        max-height: 40px;
+    }
+
+
+    .search-bottom-button {
+        height: 40px;
+    }
+
+}
+
+
+/* =========================================================
+   SECTION 17
+   VERY SMALL MOBILE DEVICES
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .search-title {
+        font-size: 17px;
+    }
+
+
+    .search-nav-svg {
+        width: 20px;
+        height: 20px;
+    }
+
+}
+
+
+/* =========================================================
+   SECTION 18
+   TABLET AND LARGE SCREENS
+========================================================= */
+
+@media (min-width: 768px) {
+
+    .search-title {
+        font-size: 19px;
+    }
+
+
+    .search-nav-svg {
+        width: 22px;
+        height: 22px;
+    }
+
+}
+
+
+/* =========================================================
+   SECTION 19
+   LANDSCAPE MOBILE
+========================================================= */
+
+@media (
+    orientation: landscape
+) and (
+    max-height: 500px
+) {
+
+    .search-title {
+        font-size: 16px;
+    }
+
+
+    .search-nav-svg {
+        width: 20px;
+        height: 20px;
+    }
+
+}
+
+
+/* =========================================================
+   SECTION 20
+   FINAL SEARCH STATE
+========================================================= */
+
+#searchPage {
+    opacity: 1;
+
+    visibility: visible;
+
+    background: #080808;
+}
+
+
+#searchTopBar {
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+#searchSecondBar {
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+#searchContent {
+    opacity: 1;
+
+    visibility: visible;
+}

@@ -1,0 +1,602 @@
+/* =========================================================
+   WAVEGRAM
+   EDIT PROFILE.CSS
+========================================================= */
+
+
+/* =========================================================
+   SECTION 1
+   GLOBAL RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   SECTION 2
+   PAGE
+========================================================= */
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    background: #080808;
+
+    color: #ffffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+
+
+body {
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   SECTION 3
+   EDIT PROFILE PAGE
+========================================================= */
+
+.edit-profile-page {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100vw;
+    height: 100dvh;
+
+    overflow: hidden;
+
+    background: #080808;
+}
+
+
+/* =========================================================
+   SECTION 4
+   TOP 50PX BAR
+========================================================= */
+
+.edit-profile-top-bar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+
+    height: 50px;
+    min-height: 50px;
+    max-height: 50px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #111111 0%,
+            #0c0c0c 100%
+        );
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.055);
+
+    box-shadow:
+        0 2px 8px
+        rgba(0, 0, 0, 0.35);
+
+    z-index: 100;
+}
+
+
+/* =========================================================
+   SECTION 5
+   CONTENT
+========================================================= */
+
+.edit-profile-content {
+    position: absolute;
+
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+
+    height:
+        calc(
+            100dvh - 50px
+        );
+
+    overflow: hidden;
+
+    background: #080808;
+}
+
+/* =========================================================
+   SECTION 6
+   SECOND 40PX BAR
+========================================================= */
+
+.edit-profile-second-bar {
+    position: fixed;
+
+    top: 50px;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+
+    height: 40px;
+    min-height: 40px;
+    max-height: 40px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #111111 0%,
+            #0c0c0c 100%
+        );
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.055);
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.055);
+
+    box-shadow:
+        0 2px 8px
+        rgba(0, 0, 0, 0.35);
+
+    z-index: 101;
+}
+
+/* =========================================================
+   SECTION 7
+   EDIT PROFILE BACK BUTTON
+========================================================= */
+
+.edit-profile-back-button {
+    position: absolute;
+
+    left: 8px;
+    top: 0;
+
+    width: 40px;
+    height: 40px;
+
+    padding: 0;
+    margin: 0;
+
+    border: 0;
+    outline: none;
+
+    background: transparent;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   SECTION 8
+   BACK ARROW
+========================================================= */
+
+.edit-profile-back-arrow {
+    position: relative;
+
+    width: 11px;
+    height: 11px;
+
+    border-left:
+        2px solid
+        rgba(255, 255, 255, 0.85);
+
+    border-bottom:
+        2px solid
+        rgba(255, 255, 255, 0.85);
+
+    transform:
+        rotate(45deg);
+
+    margin-left: 5px;
+}
+
+/* =========================================================
+   SECTION 9
+   EDIT PROFILE TITLE
+========================================================= */
+
+.edit-profile-title {
+    position: absolute;
+
+    left: 52px;
+    top: 0;
+
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    color: #ffffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+/* =========================================================
+   SECTION 10
+   EDIT PROFILE MAIN BOX
+========================================================= */
+
+.edit-profile-main-box {
+    position: fixed;
+
+    top: 102px;
+    left: 12px;
+    right: 12px;
+
+    width: auto;
+    height: 550px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #151515 0%,
+            #0d0d0d 100%
+        );
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.06);
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 2px 8px
+        rgba(0, 0, 0, 0.25);
+
+    overflow: hidden;
+
+    z-index: 10;
+}
+
+
+/* =========================================================
+   SECTION 11
+   EDIT PROFILE FORM
+========================================================= */
+
+.edit-profile-form {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 30px;
+
+    width: 100%;
+
+    padding:
+        14px 14px 200px 14px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    scrollbar-width: none;
+
+    -webkit-overflow-scrolling: touch;
+
+    overscroll-behavior-y: contain;
+
+    scroll-behavior: smooth;
+}
+
+
+/* =========================================================
+   SECTION 12
+   FORM FIELD
+========================================================= */
+
+.edit-profile-field {
+    width: 100%;
+
+    margin-bottom: 12px;
+}
+
+
+.edit-profile-field label,
+.edit-profile-choice-section label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color:
+        rgba(255, 255, 255, 0.72);
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.3px;
+}
+
+
+/* =========================================================
+   SECTION 13
+   INPUT
+========================================================= */
+
+.edit-profile-field input,
+.edit-profile-field textarea {
+    width: 100%;
+
+    border: 1px solid
+        rgba(255, 255, 255, 0.08);
+
+    outline: none;
+
+    border-radius: 8px;
+
+    background: #101010;
+
+    color: #ffffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 13px;
+
+    padding: 0 12px;
+
+    transition:
+        border-color 0.2s ease;
+}
+
+
+.edit-profile-field input {
+    height: 40px;
+}
+
+
+.edit-profile-field textarea {
+    height: 68px;
+
+    min-height: 68px;
+    max-height: 68px;
+
+    padding:
+        10px 12px;
+
+    resize: none;
+}
+
+
+.edit-profile-field input::placeholder,
+.edit-profile-field textarea::placeholder {
+    color:
+        rgba(255, 255, 255, 0.30);
+}
+
+
+.edit-profile-field input:focus,
+.edit-profile-field textarea:focus {
+    border-color:
+        rgba(255, 255, 255, 0.22);
+}
+
+
+/* =========================================================
+   SECTION 14
+   CHOICE SECTION
+========================================================= */
+
+.edit-profile-choice-section {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 12px;
+
+    padding:
+        10px 0;
+}
+
+
+.edit-profile-choice-section label {
+    margin: 0;
+}
+
+
+/* =========================================================
+   SECTION 15
+   CHOOSE BUTTON
+========================================================= */
+
+.edit-profile-choice-button {
+    height: 34px;
+
+    padding:
+        0 14px;
+
+    border: 1px solid
+        rgba(255, 255, 255, 0.10);
+
+    border-radius: 7px;
+
+    outline: none;
+
+    background: #1b1b1b;
+
+    color: #ffffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   SECTION 16
+   EDIT PROFILE ACTION BAR
+========================================================= */
+
+.edit-profile-action-bar {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    padding:
+        0 10px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #151515 0%,
+            #0d0d0d 100%
+        );
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   SECTION 17
+   ACTION BUTTONS
+========================================================= */
+
+.edit-profile-action-button {
+    height: 32px;
+
+    padding:
+        0 18px;
+
+    border: 0;
+
+    border-radius: 7px;
+
+    outline: none;
+
+    background: #222222;
+
+    color: #ffffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   SECTION 18
+   CANCEL BUTTON
+========================================================= */
+
+.edit-profile-action-button.cancel {
+    color:
+        rgba(255, 255, 255, 0.78);
+}
+
+
+/* =========================================================
+   SECTION 19
+   UPDATE BUTTON
+========================================================= */
+
+.edit-profile-action-button.update {
+    background: #ffffff;
+
+    color: #080808;
+}
+
+/* =========================================================
+   SECTION 20
+   KEYBOARD OPEN HEIGHT SUPPORT
+========================================================= */
+
+.edit-profile-main-box.keyboard-open {
+    height:
+        calc(
+            var(--keyboard-visible-height) - 112px
+        );
+}
+
+
+.edit-profile-form.keyboard-open {
+    padding-bottom: 40px;
+}

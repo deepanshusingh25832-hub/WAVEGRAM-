@@ -1,0 +1,666 @@
+/* =========================================================
+   WAVEGRAM
+   MUSIC.CSS
+========================================================= */
+
+
+/* =========================================================
+   SECTION 1
+   GLOBAL RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    background: #080808;
+    color: #ffffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+
+
+body {
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   SECTION 2
+   MUSIC PAGE
+========================================================= */
+
+.music-page {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100vw;
+    height: 100dvh;
+
+    overflow: hidden;
+
+    background: #080808;
+}
+
+
+/* =========================================================
+   SECTION 3
+   TOP 50PX BAR
+========================================================= */
+
+.music-top-bar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+    height: 50px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #111111 0%,
+            #0c0c0c 100%
+        );
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.055);
+
+    box-shadow:
+        0 2px 8px
+        rgba(0, 0, 0, 0.35);
+
+    z-index: 100;
+}
+
+
+/* =========================================================
+   SECTION 4
+   SECOND 50PX HEADER
+========================================================= */
+
+.music-header {
+    position: fixed;
+
+    top: 50px;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            180deg,
+            #151515 0%,
+            #101010 100%
+        );
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.055);
+
+    box-shadow:
+        0 2px 8px
+        rgba(0, 0, 0, 0.30);
+
+    z-index: 99;
+}
+
+
+/* =========================================================
+   SECTION 5
+   BACK BUTTON
+========================================================= */
+
+.music-back-button {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 50px;
+    height: 50px;
+
+    padding: 0;
+    margin: 0;
+
+    border: 0;
+    outline: none;
+
+    background: transparent;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   SECTION 6
+   BACK ICON
+========================================================= */
+
+.music-back-icon {
+    position: relative;
+
+    display: block;
+
+    width: 11px;
+    height: 11px;
+
+    border-left:
+        2px solid
+        #ffffff;
+
+    border-bottom:
+        2px solid
+        #ffffff;
+
+    transform:
+        rotate(45deg);
+
+    margin-left: 5px;
+}
+
+
+/* =========================================================
+   SECTION 7
+   BACK BUTTON TAP
+========================================================= */
+
+.music-back-button:active {
+    opacity: 0.55;
+}
+
+
+.music-back-button:focus {
+    outline: none;
+}
+
+
+/* =========================================================
+   SECTION 8
+   MUSIC TITLE
+========================================================= */
+
+.music-title {
+    position: absolute;
+
+    left: 50%;
+    top: 0;
+
+    width: auto;
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    transform:
+        translateX(-50%);
+
+    color: #ffffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    user-select: none;
+}
+
+
+/* =========================================================
+   SECTION 9
+   MUSIC CONTENT
+========================================================= */
+
+.music-content {
+    position: absolute;
+
+    top: 100px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: calc(100dvh - 100px);
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    padding: 10px;
+
+    background: #080808;
+
+    scrollbar-width: none;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+
+.music-content::-webkit-scrollbar {
+    display: none;
+
+    width: 0;
+    height: 0;
+}
+
+
+/* =========================================================
+   SECTION 10
+   SMALL DEVICES
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .music-title {
+        font-size: 15px;
+    }
+
+
+    .music-back-button {
+        width: 48px;
+        height: 50px;
+    }
+
+
+    .music-back-icon {
+        width: 10px;
+        height: 10px;
+    }
+
+}
+
+/* =========================================================
+   SECTION 11
+   MUSIC SEARCH WRAPPER
+========================================================= */
+
+.music-search-wrapper {
+    width: 100%;
+
+    padding:
+        0 0 10px 0;
+
+    margin: 0;
+}
+
+
+/* =========================================================
+   SECTION 12
+   MUSIC SEARCH INPUT
+========================================================= */
+
+.music-search-input {
+    display: block;
+
+    width: 100%;
+    height: 44px;
+
+    padding:
+        0 14px;
+
+    margin: 0;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.16);
+
+    border-radius: 10px;
+
+    outline: none;
+
+    background: #111111;
+
+    color: #ffffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 400;
+
+    -webkit-appearance: none;
+
+    appearance: none;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   SECTION 13
+   SEARCH PLACEHOLDER
+========================================================= */
+
+.music-search-input::placeholder {
+    color:
+        rgba(255, 255, 255, 0.42);
+}
+
+
+/* =========================================================
+   SECTION 14
+   SEARCH FOCUS
+========================================================= */
+
+.music-search-input:focus {
+    border-color:
+        rgba(255, 255, 255, 0.38);
+
+    background: #121212;
+}
+
+
+/* =========================================================
+   SECTION 15
+   SEARCH CANCEL BUTTON
+========================================================= */
+
+.music-search-input::-webkit-search-cancel-button {
+    filter: invert(1);
+
+    opacity: 0.65;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   SECTION 16
+   SMALL DEVICES
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .music-search-input {
+        height: 42px;
+
+        padding:
+            0 12px;
+
+        font-size: 13px;
+
+        border-radius: 9px;
+    }
+
+}
+
+/* =========================================================
+   SECTION 17
+   MUSIC LIST
+========================================================= */
+
+.music-list {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    padding:
+        0 0 20px 0;
+}
+
+
+/* =========================================================
+   SECTION 18
+   MUSIC CARD
+========================================================= */
+
+.music-card {
+    position: relative;
+
+    width: 100%;
+    min-height: 68px;
+
+    padding:
+        8px 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    background: #111111;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.12);
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   SECTION 19
+   MUSIC THUMBNAIL
+========================================================= */
+
+.music-card-thumbnail {
+    width: 52px;
+    height: 52px;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+
+    border-radius: 8px;
+
+    background: #1a1a1a;
+}
+
+
+.music-card-thumbnail-image {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    background: #1a1a1a;
+}
+
+
+/* =========================================================
+   SECTION 20
+   MUSIC INFORMATION
+========================================================= */
+
+.music-card-info {
+    flex: 1;
+
+    min-width: 0;
+
+    margin-left: 11px;
+
+    overflow: hidden;
+}
+
+
+.music-card-name {
+    width: 100%;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+.music-card-artist {
+    width: 100%;
+
+    margin-top: 4px;
+
+    color:
+        rgba(255, 255, 255, 0.45);
+
+    font-size: 12px;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* =========================================================
+   SECTION 21
+   PLAY BUTTON
+========================================================= */
+
+.music-card-play-button {
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    padding: 0;
+    margin: 0 0 0 8px;
+
+    border: 0;
+
+    outline: none;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   SECTION 22
+   PLAY ICON
+========================================================= */
+
+.music-card-play-icon {
+    display: block;
+
+    width: 0;
+    height: 0;
+
+    margin-left: 3px;
+
+    border-top:
+        7px solid
+        transparent;
+
+    border-bottom:
+        7px solid
+        transparent;
+
+    border-left:
+        10px solid
+        #080808;
+}
+
+
+.music-card-play-button:active {
+    transform: scale(0.92);
+
+    opacity: 0.8;
+}
+
+
+/* =========================================================
+   SECTION 23
+   SMALL DEVICES
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .music-card {
+        min-height: 64px;
+
+        padding:
+            7px 8px;
+    }
+
+
+    .music-card-thumbnail {
+        width: 50px;
+        height: 50px;
+    }
+
+
+    .music-card-name {
+        font-size: 13px;
+    }
+
+
+    .music-card-artist {
+        font-size: 11px;
+    }
+
+
+    .music-card-play-button {
+        width: 40px;
+        height: 40px;
+    }
+
+}

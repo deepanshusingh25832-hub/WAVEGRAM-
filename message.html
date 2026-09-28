@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>WAVEGRAM - Messages</title>
+
+    <link
+        rel="stylesheet"
+        href="css/message.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     SECTION 1
+     MESSAGE PAGE
+========================================================= -->
+
+<div
+    id="messagePage"
+    class="message-page"
+>
+
+
+    <!-- =====================================================
+         SECTION 2
+         TOP 50PX BAR
+    ====================================================== -->
+
+    <div
+        id="messageTopBar"
+        class="message-top-bar"
+    ></div>
+
+
+<!-- =========================================================
+     SECTION 3
+     MESSAGE SEARCH 50PX BAR
+========================================================= -->
+
+<div
+    id="messageSearchBar"
+    class="message-search-bar"
+>
+
+    <div
+        id="messageSearchBox"
+        class="message-search-box"
+    >
+
+        <svg
+            class="message-search-icon"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+        >
+
+            <circle
+                cx="10.8"
+                cy="10.8"
+                r="6.5"
+            />
+
+            <path
+                d="M16 16 L21 21"
+            />
+
+        </svg>
+
+
+        <input
+            id="messageSearchInput"
+            class="message-search-input"
+            type="search"
+            placeholder="Search"
+            autocomplete="off"
+        >
+
+    </div>
+
+</div>
+
+<!-- =========================================================
+     SECTION 4
+     MESSAGE NOTE DP BOX
+========================================================= -->
+
+<div
+    id="messageNoteBox"
+    class="message-note-box"
+>
+
+    <div
+        class="message-note-dp-wrapper"
+    >
+
+        <!-- PROFILE DP -->
+
+        <img
+            id="messageNoteDp"
+            class="message-note-dp"
+            src="images/unknown-dp.png"
+            alt="Profile"
+        >
+
+
+        <!-- ADD NOTE BUTTON -->
+
+        <button
+            id="messageAddNoteButton"
+            class="message-add-note-button"
+            type="button"
+            aria-label="Add Note"
+        >
+
+            <span
+                class="message-add-note-plus"
+            ></span>
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- =========================================================
+     SECTION 6
+     MESSAGE TABS
+========================================================= -->
+
+<div
+    id="messageTabs"
+    class="message-tabs"
+>
+
+    <button
+        id="messageGroupsButton"
+        class="message-tab-button active"
+        type="button"
+    >
+        Groups
+    </button>
+
+
+    <button
+        id="messageMessagesButton"
+        class="message-tab-button"
+        type="button"
+    >
+        Messages
+    </button>
+
+</div>
+
+<!-- =========================================================
+     SECTION 7
+     MESSAGE CREATE PLUS BUTTON
+========================================================= -->
+
+<button
+    id="messageCreatePlusButton"
+    class="message-create-plus-button"
+    type="button"
+    aria-label="Create"
+>
+
+    <span
+        class="message-create-plus-icon"
+    ></span>
+
+</button>
+
+
+    <!-- =====================================================
+         SECTION 4
+         BOTTOM EMPTY 40PX BAR
+    ====================================================== -->
+
+    <div
+        id="messageBottomBar"
+        class="message-bottom-bar"
+    ></div>
+
+
+<!-- =========================================================
+     SECTION 5
+     BOTTOM NAVIGATION
+========================================================= -->
+
+<nav
+    id="messageBottomNavigation"
+    class="message-bottom-navigation"
+    aria-label="Main navigation"
+>
+
+
+    <!-- =====================================================
+         HOME
+    ====================================================== -->
+
+    <a
+        id="messageNavHome"
+        class="message-bottom-button"
+        href="home.html"
+        aria-label="Home"
+    >
+
+        <svg
+            class="message-nav-svg"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+        >
+
+            <path
+                d="M3.5 10.7
+                   L12 3.8
+                   L20.5 10.7
+                   V20
+                   H14.7
+                   V14.2
+                   H9.3
+                   V20
+                   H3.5
+                   Z"
+            />
+
+        </svg>
+
+    </a>
+
+
+    <!-- =====================================================
+         SEARCH
+    ====================================================== -->
+
+    <a
+        id="messageNavSearch"
+        class="message-bottom-button"
+        href="search.html"
+        aria-label="Search"
+    >
+
+        <svg
+            class="message-nav-svg"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+        >
+
+            <circle
+                cx="10.8"
+                cy="10.8"
+                r="6.6"
+            />
+
+            <path
+                d="M16 16 L21 21"
+            />
+
+        </svg>
+
+    </a>
+
+
+    <!-- =====================================================
+         MESSAGE
+    ====================================================== -->
+
+    <a
+        id="messageNavMessage"
+        class="message-bottom-button active"
+        href="message.html"
+        aria-label="Messages"
+    >
+
+        <svg
+            class="message-nav-svg"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+        >
+
+            <path
+                d="M4 5.5
+                   C4 4.7 4.7 4 5.5 4
+                   H18.5
+                   C19.3 4 20 4.7 20 5.5
+                   V15
+                   C20 15.8 19.3 16.5 18.5 16.5
+                   H10
+                   L5 20
+                   V16.5
+                   H5.5
+                   C4.7 16.5 4 15.8 4 15
+                   Z"
+            />
+
+        </svg>
+
+    </a>
+
+
+    <!-- =====================================================
+         REEL
+    ====================================================== -->
+
+    <a
+        id="messageNavReel"
+        class="message-bottom-button"
+        href="reel.html"
+        aria-label="Reels"
+    >
+
+        <svg
+            class="message-nav-svg"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+        >
+
+            <rect
+                x="3.5"
+                y="4.5"
+                width="17"
+                height="15"
+                rx="4"
+            />
+
+            <path
+                d="M3.8 9.5 H20.2"
+            />
+
+            <path
+                d="M8 4.8
+                   L11 9.3
+                   M14 4.8
+                   L17 9.3"
+            />
+
+        </svg>
+
+    </a>
+
+
+    <!-- =====================================================
+         PROFILE
+    ====================================================== -->
+
+    <a
+        id="messageNavProfile"
+        class="message-bottom-button"
+        href="profile.html"
+        aria-label="Profile"
+    >
+
+        <svg
+            class="message-nav-svg"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+        >
+
+            <circle
+                cx="12"
+                cy="8"
+                r="3.2"
+            />
+
+            <path
+                d="M5 20
+                   C5.6 15.8 8.2 13.7 12 13.7
+                   C15.8 13.7 18.4 15.8 19 20"
+            />
+
+        </svg>
+
+    </a>
+
+
+</nav>
+
+
+<!-- =========================================================
+     SECTION 6
+     MESSAGE JAVASCRIPT
+========================================================= -->
+
+<script
+    src="js/message.js"
+></script>
+
+
+</body>
+
+</html>

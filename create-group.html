@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>WAVEGRAM - Create Group</title>
+
+    <link
+        rel="stylesheet"
+        href="css/create-group.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     SECTION 1
+     CREATE GROUP PAGE
+========================================================= -->
+
+<div
+    id="createGroupPage"
+    class="create-group-page"
+>
+
+
+    <!-- =====================================================
+         SECTION 2
+         TOP 50PX BAR
+    ====================================================== -->
+
+    <div
+        id="createGroupTopBar"
+        class="create-group-top-bar"
+    ></div>
+
+
+    <!-- =====================================================
+         SECTION 3
+         SECOND 50PX BAR
+         BACK BUTTON + TITLE
+    ====================================================== -->
+
+    <div
+        id="createGroupSecondBar"
+        class="create-group-second-bar"
+    >
+
+        <!-- BACK BUTTON -->
+
+        <button
+            id="createGroupBackButton"
+            class="create-group-back-button"
+            type="button"
+            aria-label="Back"
+        >
+
+            <svg
+                class="create-group-back-icon"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+            >
+
+                <path
+                    d="M15.5 4.5
+                       L8 12
+                       L15.5 19.5"
+                />
+
+            </svg>
+
+        </button>
+
+
+        <!-- TITLE -->
+
+        <div
+            id="createGroupTitle"
+            class="create-group-title"
+        >
+            CREATE GROUP
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         SECTION 4
+         CREATE GROUP CONTENT
+    ====================================================== -->
+
+    <main
+        id="createGroupContent"
+        class="create-group-content"
+    >
+
+    </main>
+
+
+</div>
+
+<!-- =========================================================
+     SECTION 5
+     GIF BOX
+========================================================= -->
+
+<div
+    id="createGroupGifBox"
+    class="create-group-gif-box"
+>
+
+    <div
+        class="create-group-gif-placeholder"
+    >
+        GIF
+    </div>
+
+</div>
+
+<!-- =========================================================
+     SECTION 6
+     SELECT GIF BUTTON
+========================================================= -->
+
+<div
+    id="createGroupGifAction"
+    class="create-group-gif-action"
+>
+
+    <button
+        id="selectGifButton"
+        class="select-gif-button"
+        type="button"
+    >
+        Select GIF
+    </button>
+
+</div>
+
+<!-- =========================================================
+     SECTION 7
+     GROUP PROFILE DP
+========================================================= -->
+
+<div
+    id="createGroupDpBox"
+    class="create-group-dp-box"
+>
+
+    <img
+        id="createGroupDp"
+        class="create-group-dp"
+        src="images/unknown-dp.png"
+        alt="Group Profile"
+    >
+
+</div>
+
+<!-- =========================================================
+     SECTION 8
+     GROUP DP + GROUP NAME
+========================================================= -->
+
+<div
+    id="createGroupDetails"
+    class="create-group-details"
+>
+
+
+    <!-- SELECT DP -->
+
+    <button
+        id="selectDpButton"
+        class="select-dp-button"
+        type="button"
+    >
+        Select DP
+    </button>
+
+
+    <!-- GROUP NAME -->
+
+    <div
+        class="create-group-name-box"
+    >
+
+        <input
+            id="groupNameInput"
+            class="group-name-input"
+            type="text"
+            placeholder="Group name"
+            maxlength="50"
+            autocomplete="off"
+        >
+
+    </div>
+
+</div>
+
+<!-- =========================================================
+     SECTION 9
+     GROUP BIO
+========================================================= -->
+
+<div
+    id="createGroupBioBox"
+    class="create-group-bio-box"
+>
+
+    <input
+        id="groupBioInput"
+        class="group-bio-input"
+        type="text"
+        placeholder="Group Bio"
+        maxlength="150"
+        autocomplete="off"
+    >
+
+</div>
+
+<!-- =========================================================
+     SECTION 10
+     CANCEL + CREATE BUTTONS
+========================================================= -->
+
+<div
+    id="createGroupActionButtons"
+    class="create-group-action-buttons"
+>
+
+    <button
+        id="cancelCreateGroupButton"
+        class="create-group-button cancel-create-group-button"
+        type="button"
+    >
+        Cancel
+    </button>
+
+
+    <button
+        id="createGroupButton"
+        class="create-group-button create-group-submit-button"
+        type="button"
+    >
+        Create
+    </button>
+
+</div>
+
+<!-- =========================================================
+     SECTION 5A
+     CREATE GROUP JAVASCRIPT
+========================================================= -->
+
+<script
+    src="js/create-group.js"
+></script>
+
+
+</body>
+
+</html>

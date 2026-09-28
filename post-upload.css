@@ -1,0 +1,1170 @@
+/* =========================================================
+   WAVEGRAM
+   POST-UPLOAD.CSS
+========================================================= */
+
+
+/* =========================================================
+   SECTION 1
+   GLOBAL RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    background: #080808;
+    color: #ffffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   SECTION 2
+   POST UPLOAD PAGE
+========================================================= */
+
+.post-upload-page {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100vw;
+    height: 100dvh;
+
+    overflow: hidden;
+
+    background: #080808;
+}
+
+
+/* =========================================================
+   SECTION 3
+   TOP 50PX BAR
+========================================================= */
+
+.post-upload-top-bar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+    height: 50px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #111111 0%,
+            #0c0c0c 100%
+        );
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.055);
+
+    box-shadow:
+        0 2px 8px
+        rgba(0, 0, 0, 0.35);
+
+    z-index: 200;
+}
+
+
+/* =========================================================
+   SECTION 4
+   SECOND 50PX HEADER
+========================================================= */
+
+.post-upload-header {
+    position: fixed;
+
+    top: 50px;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            180deg,
+            #151515 0%,
+            #101010 100%
+        );
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.055);
+
+    box-shadow:
+        0 2px 8px
+        rgba(0, 0, 0, 0.30);
+
+    z-index: 199;
+}
+
+
+/* =========================================================
+   SECTION 5
+   BACK BUTTON
+========================================================= */
+
+.post-upload-back-button {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 50px;
+    height: 50px;
+
+    padding: 0;
+    margin: 0;
+
+    border: 0;
+    outline: none;
+
+    background: transparent;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+.post-upload-back-button:active {
+    opacity: 0.55;
+}
+
+
+/* =========================================================
+   SECTION 6
+   BACK ICON
+========================================================= */
+
+.post-upload-back-icon {
+    position: relative;
+
+    display: block;
+
+    width: 11px;
+    height: 11px;
+
+    border-left:
+        2px solid
+        #ffffff;
+
+    border-bottom:
+        2px solid
+        #ffffff;
+
+    transform: rotate(45deg);
+
+    margin-left: 5px;
+}
+
+
+/* =========================================================
+   SECTION 7
+   POST UPLOAD TITLE
+========================================================= */
+
+.post-upload-title {
+    position: absolute;
+
+    left: 50%;
+    top: 0;
+
+    width: auto;
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    transform: translateX(-50%);
+
+    color: #ffffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    user-select: none;
+}
+
+
+/* =========================================================
+   SECTION 8
+   MAIN SCROLL CONTENT
+========================================================= */
+
+.post-upload-content {
+    position: absolute;
+
+    top: 100px;
+    left: 0;
+    right: 0;
+    bottom: 100px;
+
+    width: 100%;
+    height: auto;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    padding:
+        10px
+        10px
+        30px
+        10px;
+
+    background: #080808;
+
+    scrollbar-width: none;
+
+    -webkit-overflow-scrolling: touch;
+
+    overscroll-behavior-y: contain;
+
+    scroll-behavior: smooth;
+
+    z-index: 10;
+}
+
+
+.post-upload-content::-webkit-scrollbar {
+    display: none;
+
+    width: 0;
+    height: 0;
+}
+
+
+/* =========================================================
+   SECTION 9
+   SINGLE MEDIA PREVIEW BOX
+========================================================= */
+
+.post-upload-preview-box {
+    position: relative;
+
+    width: 100%;
+    height: 260px;
+
+    min-height: 260px;
+
+    margin:
+        0
+        0
+        10px
+        0;
+
+    background: #111111;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.14);
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    z-index: 10;
+}
+
+
+/* =========================================================
+   SECTION 10
+   EMPTY PREVIEW
+========================================================= */
+
+.post-upload-preview-empty {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    color:
+        rgba(255, 255, 255, 0.45);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 14px;
+
+    line-height: 20px;
+
+    text-align: center;
+
+    user-select: none;
+}
+
+
+/* =========================================================
+   SECTION 11
+   IMAGE PREVIEW
+========================================================= */
+
+.post-upload-preview-image {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    background: #050505;
+}
+
+
+/* =========================================================
+   SECTION 12
+   VIDEO PREVIEW
+========================================================= */
+
+.post-upload-preview-video {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    background: #050505;
+}
+
+
+/* =========================================================
+   SECTION 13
+   GIF PREVIEW
+========================================================= */
+
+.post-upload-preview-gif {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    background: #050505;
+}
+
+
+/* =========================================================
+   SECTION 14
+   PREVIEW HIDDEN
+========================================================= */
+
+.post-upload-preview-box .preview-hidden {
+    display: none !important;
+}
+
+
+/* =========================================================
+   SECTION 15
+   MEDIA UPLOAD BUTTON WRAPPER
+========================================================= */
+
+.post-upload-media-button-wrapper {
+    position: relative;
+
+    width: 100%;
+
+    margin:
+        0
+        0
+        10px
+        0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    z-index: 20;
+}
+
+
+/* =========================================================
+   SECTION 16
+   MEDIA UPLOAD BUTTON
+========================================================= */
+
+.post-upload-media-button {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 46px;
+
+    padding: 0 20px;
+
+    margin: 0;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.18);
+
+    border-radius: 10px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    color: #080808;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    flex-shrink: 0;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+.post-upload-media-button:active {
+    transform: scale(0.98);
+
+    opacity: 0.80;
+}
+
+
+/* =========================================================
+   SECTION 17
+   MUSIC OPTION
+========================================================= */
+
+.post-upload-music-wrapper {
+    position: relative;
+
+    width: 100%;
+
+    margin:
+        0
+        0
+        10px
+        0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    z-index: 30;
+}
+
+
+.post-upload-music-button {
+    position: relative;
+
+    width: 100%;
+    height: 46px;
+
+    padding: 0;
+    margin: 0;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.18);
+
+    border-radius: 10px;
+
+    outline: none;
+
+    background: #151515;
+
+    color: #ffffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    flex-shrink: 0;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+.post-upload-music-button:active {
+    transform: scale(0.98);
+
+    opacity: 0.80;
+}
+
+
+/* =========================================================
+   SECTION 18
+   CAPTION WRAPPER
+========================================================= */
+
+.post-upload-caption-wrapper {
+    position: relative;
+
+    width: 100%;
+
+    margin:
+        0
+        0
+        20px
+        0;
+
+    padding: 0;
+
+    z-index: 40;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   SECTION 19
+   CAPTION BOX
+========================================================= */
+
+.post-upload-caption {
+    display: block;
+
+    width: 100%;
+    height: 90px;
+
+    min-height: 90px;
+
+    padding: 12px;
+
+    margin: 0;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.18);
+
+    border-radius: 10px;
+
+    outline: none;
+
+    resize: none;
+
+    background: #111111;
+
+    color: #ffffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 14px;
+
+    line-height: 20px;
+
+    overflow-y: auto;
+
+    -webkit-tap-highlight-color: transparent;
+
+    box-sizing: border-box;
+}
+
+
+.post-upload-caption::placeholder {
+    color:
+        rgba(255, 255, 255, 0.42);
+}
+
+
+.post-upload-caption:focus {
+    border-color:
+        rgba(255, 255, 255, 0.40);
+}
+
+
+/* =========================================================
+   SECTION 20
+   EXTRA BOTTOM SCROLL SPACE
+========================================================= */
+
+.post-upload-scroll-spacer {
+    width: 100%;
+
+    height: 20px;
+
+    min-height: 20px;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   SECTION 21
+   BOTTOM EMPTY 50PX BAR
+========================================================= */
+
+.post-upload-bottom-empty-bar {
+    position: fixed;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 50px;
+
+    background: #111111;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    z-index: 200;
+}
+
+
+/* =========================================================
+   SECTION 22
+   BOTTOM CANCEL / UPLOAD BAR
+========================================================= */
+
+.post-upload-bottom-action-bar {
+    position: fixed;
+
+    left: 0;
+    right: 0;
+    bottom: 50px;
+
+    width: 100%;
+    height: 50px;
+
+    padding:
+        5px 10px;
+
+    background: #0c0c0c;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    z-index: 201;
+}
+
+
+/* =========================================================
+   SECTION 23
+   CANCEL BUTTON
+========================================================= */
+
+.post-upload-cancel-button {
+    width: calc(50% - 5px);
+    height: 40px;
+
+    padding: 0;
+    margin: 0;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.16);
+
+    border-radius: 8px;
+
+    outline: none;
+
+    background: #202020;
+
+    color: #ffffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+.post-upload-cancel-button:active {
+    transform: scale(0.97);
+
+    opacity: 0.80;
+}
+
+
+/* =========================================================
+   SECTION 24
+   UPLOAD BUTTON
+========================================================= */
+
+.post-upload-submit-button {
+    width: calc(50% - 5px);
+    height: 40px;
+
+    padding: 0;
+    margin: 0;
+
+    border: 0;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    color: #080808;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+.post-upload-submit-button:active {
+    transform: scale(0.97);
+
+    opacity: 0.80;
+}
+
+
+/* =========================================================
+   SECTION 25
+   MOBILE KEYBOARD / SMALL HEIGHT
+========================================================= */
+
+@media (max-height: 600px) {
+
+    .post-upload-content {
+        padding-bottom: 40px;
+    }
+
+}
+
+
+/* =========================================================
+   SECTION 26
+   SMALL DEVICES
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .post-upload-title {
+        font-size: 15px;
+    }
+
+
+    .post-upload-back-button {
+        width: 48px;
+        height: 50px;
+    }
+
+
+    .post-upload-back-icon {
+        width: 10px;
+        height: 10px;
+    }
+
+
+    .post-upload-preview-box {
+        height: 240px;
+        min-height: 240px;
+    }
+
+
+    .post-upload-media-button,
+    .post-upload-music-button {
+        height: 44px;
+    }
+
+
+    .post-upload-caption {
+        height: 90px;
+        min-height: 90px;
+    }
+
+}
+
+/* =========================================================
+   SECTION 28
+   EMPTY BOTTOM BAR HIDDEN
+========================================================= */
+
+.post-upload-bottom-empty-bar {
+    display: none !important;
+}
+
+
+/* =========================================================
+   SECTION 29
+   BOTTOM ACTION BAR
+========================================================= */
+
+.post-upload-bottom-action-bar {
+    position: fixed;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 50px;
+
+    padding:
+        5px 10px;
+
+    margin: 0;
+
+    background: #0c0c0c;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    z-index: 9999;
+
+    transform: none !important;
+
+    -webkit-transform: none !important;
+
+    transition: none !important;
+
+    -webkit-transition: none !important;
+}
+
+
+/* =========================================================
+   SECTION 30
+   CANCEL BUTTON
+========================================================= */
+
+.post-upload-cancel-button {
+    width: calc(50% - 5px);
+
+    height: 40px;
+
+    padding: 0;
+    margin: 0;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.16);
+
+    border-radius: 8px;
+
+    outline: none;
+
+    background: #202020;
+
+    color: #ffffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    -webkit-tap-highlight-color: transparent;
+
+    transform: none;
+}
+
+
+/* =========================================================
+   SECTION 31
+   UPLOAD BUTTON
+========================================================= */
+
+.post-upload-submit-button {
+    width: calc(50% - 5px);
+
+    height: 40px;
+
+    padding: 0;
+    margin: 0;
+
+    border: 0;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    color: #080808;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    -webkit-tap-highlight-color: transparent;
+
+    transform: none;
+}
+
+
+/* =========================================================
+   SECTION 32
+   BUTTON TAP
+========================================================= */
+
+.post-upload-cancel-button:active,
+.post-upload-submit-button:active {
+
+    transform: scale(0.97);
+
+    opacity: 0.80;
+
+}
+
+
+/* =========================================================
+   SECTION 33
+   KEYBOARD / VIEWPORT PROTECTION
+========================================================= */
+
+.post-upload-bottom-action-bar {
+    position: fixed;
+
+    bottom: 0;
+
+    left: 0;
+    right: 0;
+
+    height: 50px;
+
+    max-height: 50px;
+
+    min-height: 50px;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+
+    box-sizing: border-box;
+
+}
+
+
+/* =========================================================
+   SECTION 34
+   SMALL DEVICES
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .post-upload-bottom-action-bar {
+
+        height: 50px;
+
+        min-height: 50px;
+
+        max-height: 50px;
+
+        padding:
+            5px 8px;
+
+        gap: 8px;
+
+    }
+
+
+    .post-upload-cancel-button,
+    .post-upload-submit-button {
+
+        height: 40px;
+
+        font-size: 13px;
+
+    }
+
+}
+
+
+/* =========================================================
+   SECTION 35
+   FINAL PAGE SAFETY
+========================================================= */
+
+.post-upload-page {
+
+    padding-bottom: 70px;
+
+}
+
+
+/* =========================================================
+   SECTION 36
+   CONTENT SCROLL SAFETY
+========================================================= */
+
+.post-upload-content {
+
+    padding-bottom: 70px;
+
+}
+
+
+/* =========================================================
+   SECTION 37
+   NO MOVEMENT ON KEYBOARD
+========================================================= */
+
+.post-upload-bottom-action-bar,
+.post-upload-cancel-button,
+.post-upload-submit-button {
+
+    animation: none !important;
+
+    transition: none !important;
+
+}
+
+
+/* =========================================================
+   SECTION 38
+   SAFE TAP
+========================================================= */
+
+.post-upload-cancel-button:focus,
+.post-upload-submit-button:focus {
+
+    outline: none;
+
+}

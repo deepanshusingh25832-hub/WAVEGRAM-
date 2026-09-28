@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Post Upload</title>
+
+    <link
+        rel="stylesheet"
+        href="css/post-upload.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         SECTION 1
+         POST UPLOAD PAGE
+    ====================================================== -->
+
+    <div
+        id="postUploadPage"
+        class="post-upload-page"
+    >
+
+
+        <!-- =================================================
+             SECTION 2
+             TOP 50PX BAR
+        ================================================== -->
+
+        <div
+            id="postUploadTopBar"
+            class="post-upload-top-bar"
+        ></div>
+
+
+        <!-- =================================================
+             SECTION 3
+             SECOND 50PX BAR
+        ================================================== -->
+
+        <div
+            id="postUploadHeader"
+            class="post-upload-header"
+        >
+
+
+            <!-- =============================================
+                 SECTION 4
+                 BACK BUTTON
+            ============================================== -->
+
+            <button
+                id="postUploadBackButton"
+                class="post-upload-back-button"
+                type="button"
+                aria-label="Back"
+            >
+
+                <span
+                    class="post-upload-back-icon"
+                ></span>
+
+            </button>
+
+
+            <!-- =============================================
+                 SECTION 5
+                 PAGE TITLE
+            ============================================== -->
+
+            <div
+                id="postUploadTitle"
+                class="post-upload-title"
+            >
+                Post Upload
+            </div>
+
+
+        </div>
+
+
+        <!-- =================================================
+             SECTION 6
+             MAIN SCROLL CONTENT
+        ================================================== -->
+
+        <div
+            id="postUploadContent"
+            class="post-upload-content"
+        >
+
+
+            <!-- =============================================
+                 SECTION 7
+                 SINGLE MEDIA PREVIEW
+            ============================================== -->
+
+            <div
+                id="postUploadPreviewBox"
+                class="post-upload-preview-box"
+            >
+
+                <div
+                    id="postUploadPreviewEmpty"
+                    class="post-upload-preview-empty"
+                >
+                    Select photo, video or GIF
+                </div>
+
+            </div>
+
+
+            <!-- =============================================
+                 SECTION 8
+                 MEDIA UPLOAD
+            ============================================== -->
+
+            <div
+                class="post-upload-media-button-wrapper"
+            >
+
+                <input
+                    type="file"
+                    id="postUploadMediaInput"
+                    accept="image/*,video/*,.gif"
+                    hidden
+                >
+
+
+                <button
+                    type="button"
+                    id="postUploadMediaButton"
+                    class="post-upload-media-button"
+                >
+                    Upload Media
+                </button>
+
+            </div>
+
+
+            <!-- =============================================
+                 SECTION 9
+                 MUSIC OPTION
+            ============================================== -->
+
+            <div
+                class="post-upload-music-wrapper"
+            >
+
+                <button
+                    type="button"
+                    id="postUploadMusicButton"
+                    class="post-upload-music-button"
+                >
+                    Music
+                </button>
+
+            </div>
+
+
+            <!-- =============================================
+                 SECTION 10
+                 CAPTION
+            ============================================== -->
+
+            <div
+                class="post-upload-caption-wrapper"
+            >
+
+                <textarea
+                    id="postUploadCaption"
+                    class="post-upload-caption"
+                    placeholder="Write a caption..."
+                    maxlength="2200"
+                ></textarea>
+
+            </div>
+
+
+            <!-- =============================================
+                 SECTION 11
+                 EXTRA SCROLL SPACE
+            ============================================== -->
+
+            <div
+                class="post-upload-scroll-spacer"
+            ></div>
+
+
+        </div>
+
+
+        <!-- =================================================
+             SECTION 12
+             BOTTOM EMPTY BAR
+        ================================================== -->
+
+        <div
+            id="postUploadBottomEmptyBar"
+            class="post-upload-bottom-empty-bar"
+        ></div>
+
+
+        <!-- =================================================
+             SECTION 13
+             BOTTOM ACTION BAR
+        ================================================== -->
+
+        <div
+            id="postUploadBottomActionBar"
+            class="post-upload-bottom-action-bar"
+        >
+
+
+            <!-- =============================================
+                 SECTION 14
+                 CANCEL BUTTON
+            ============================================== -->
+
+            <button
+                type="button"
+                id="postUploadCancelButton"
+                class="post-upload-bottom-button post-upload-cancel-button"
+            >
+                Cancel
+            </button>
+
+
+            <!-- =============================================
+                 SECTION 15
+                 UPLOAD BUTTON
+            ============================================== -->
+
+            <button
+                type="button"
+                id="postUploadSubmitButton"
+                class="post-upload-bottom-button post-upload-submit-button"
+            >
+                Upload
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+
+    <!-- =====================================================
+         SECTION 16
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script
+        src="js/post-upload.js"
+    ></script>
+
+
+</body>
+
+</html>

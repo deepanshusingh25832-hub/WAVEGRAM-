@@ -1,0 +1,1255 @@
+/* =========================================================
+   WAVEGRAM
+   PROFILE.CSS
+   PROFILE PAGE
+========================================================= */
+
+
+/* =========================================================
+   SECTION 1
+   GLOBAL RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================================================
+   SECTION 2
+   PAGE BACKGROUND
+========================================================= */
+
+html {
+    background: #080808;
+}
+
+
+body {
+    overflow: hidden;
+
+    background: #080808;
+
+    color: #ffffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    -webkit-font-smoothing: antialiased;
+
+    text-rendering: optimizeLegibility;
+}
+
+
+/* =========================================================
+   SECTION 3
+   PROFILE PAGE CONTAINER
+========================================================= */
+
+.profile-page {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100vw;
+    height: 100dvh;
+
+    min-height: 100vh;
+
+    overflow: hidden;
+
+    background: #080808;
+
+    isolation: isolate;
+}
+
+
+/* =========================================================
+   SECTION 4
+   TOP 50PX BAR
+========================================================= */
+
+.profile-top-bar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+
+    height: 50px;
+    min-height: 50px;
+    max-height: 50px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #111111 0%,
+            #0c0c0c 100%
+        );
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.055);
+
+    box-shadow:
+        0 2px 8px
+        rgba(0, 0, 0, 0.35);
+
+    z-index: 100;
+}
+
+
+/* =========================================================
+   SECTION 5
+   SECOND 50PX BAR
+========================================================= */
+
+.profile-second-bar {
+    position: fixed;
+
+    top: 50px;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+
+    height: 50px;
+    min-height: 50px;
+    max-height: 50px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #111111 0%,
+            #0c0c0c 100%
+        );
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.055);
+
+    box-shadow:
+        0 2px 8px
+        rgba(0, 0, 0, 0.35);
+
+    z-index: 99;
+}
+
+
+/* =========================================================
+   SECTION 6
+   WAVEGRAM WG LOGO + USERNAME
+========================================================= */
+
+.profile-app-icon {
+    position: absolute;
+
+    left: 12px;
+    top: 50%;
+
+    width: 34px;
+    height: 34px;
+
+    transform: translateY(-50%);
+
+    object-fit: contain;
+
+    display: block;
+
+    -webkit-user-drag: none;
+    user-drag: none;
+}
+
+
+.profile-username {
+    position: absolute;
+
+    left: 56px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #ffffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    line-height: 1;
+
+    white-space: nowrap;
+
+    letter-spacing: 0.2px;
+}
+
+/* =========================================================
+   PROFILE PLUS BUTTON
+========================================================= */
+
+.profile-plus-button {
+    position: absolute;
+
+    right: 52px;
+    top: 50%;
+
+    width: 40px;
+    height: 40px;
+
+    transform: translateY(-50%);
+
+    padding: 0;
+
+    border: 0;
+    outline: none;
+
+    background: transparent;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+.profile-plus-icon {
+    position: relative;
+
+    width: 20px;
+    height: 20px;
+
+    display: block;
+}
+
+
+.profile-plus-icon::before,
+.profile-plus-icon::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 18px;
+    height: 2px;
+
+    background: rgba(255, 255, 255, 0.88);
+
+    border-radius: 2px;
+
+    transform: translate(-50%, -50%);
+}
+
+
+.profile-plus-icon::after {
+    transform:
+        translate(-50%, -50%)
+        rotate(90deg);
+}
+
+
+.profile-plus-button:active
+.profile-plus-icon {
+    transform: scale(0.88);
+}
+
+.profile-settings-button {
+    position: absolute;
+
+    right: 10px;
+    top: 50%;
+
+    width: 40px;
+    height: 40px;
+
+    transform: translateY(-50%);
+
+    padding: 0;
+
+    border: 0;
+    outline: none;
+
+    background: transparent;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+.profile-settings-icon {
+    width: 22px;
+    height: 22px;
+
+    fill: none;
+
+    stroke:
+        rgba(255, 255, 255, 0.82);
+
+    stroke-width: 1.8;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+    transition:
+        transform 0.18s ease,
+        stroke 0.18s ease;
+}
+
+
+.profile-settings-button:active
+.profile-settings-icon {
+    transform: scale(0.88);
+
+    stroke: #ffffff;
+}
+
+/* =========================================================
+   SECTION 7
+   GIF IMAGE BOX
+========================================================= */
+
+.profile-gif-box {
+    position: fixed;
+
+    top: 100px;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+    height: 120px;
+
+    padding: 10px 12px;
+
+    background: #080808;
+
+    z-index: 20;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+.profile-gif-placeholder {
+    width: 100%;
+    height: 100%;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #151515 0%,
+            #0d0d0d 100%
+        );
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.06);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color:
+        rgba(255, 255, 255, 0.35);
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+}
+
+/* =========================================================
+   SECTION 8
+   PROFILE DP BOX
+========================================================= */
+
+.profile-dp-box {
+    position: fixed;
+
+    top: 230px;
+    left: 14px;
+
+    width: 60px;
+    height: 60px;
+
+    background: #111111;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    z-index: 21;
+}
+
+
+.profile-dp {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    border: 0;
+}
+
+/* =========================================================
+   PROFILE STATS
+========================================================= */
+
+.profile-stats {
+    position: fixed;
+
+    top: 222px;
+    left: 92px;
+    right: 10px;
+
+    height: 64px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-around;
+
+    z-index: 21;
+}
+
+
+.profile-stat {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 65px;
+
+    color: #ffffff;
+
+    text-align: center;
+}
+
+
+.profile-stat-number {
+    font-size: 16px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    color: #ffffff;
+}
+
+
+.profile-stat-label {
+    margin-top: 4px;
+
+    font-size: 11px;
+
+    font-weight: 400;
+
+    line-height: 1.2;
+
+    color:
+        rgba(255, 255, 255, 0.62);
+
+    white-space: nowrap;
+}
+
+/* =========================================================
+   PROFILE NAME AND BIO
+========================================================= */
+
+.profile-info {
+    position: fixed;
+
+    top: 296px;
+    left: 14px;
+    right: 14px;
+
+    z-index: 21;
+}
+
+
+.profile-name {
+    font-size: 16px;
+
+    font-weight: 700;
+
+    line-height: 1.3;
+
+    color: #ffffff;
+}
+
+
+.profile-bio {
+    margin-top: 5px;
+
+    font-size: 13px;
+
+    font-weight: 400;
+
+    line-height: 1.4;
+
+    color:
+        rgba(255, 255, 255, 0.68);
+
+    max-width: 100%;
+
+    white-space: normal;
+
+    overflow-wrap: break-word;
+}
+
+/* =========================================================
+   SECTION 9
+   PROFILE ACTION BUTTONS
+========================================================= */
+
+.profile-actions {
+    position: fixed;
+
+    top: 365px;
+    left: 14px;
+    right: 14px;
+
+    display: flex;
+
+    gap: 7px;
+
+    z-index: 21;
+}
+
+
+.profile-action-button {
+    flex: 1;
+
+    height: 36px;
+
+    padding: 0 12px;
+
+    border: 0;
+
+    border-radius: 7px;
+
+    outline: none;
+
+    background: #1a1a1a;
+
+    color: #ffffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    line-height: 36px;
+
+    text-align: center;
+
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    -webkit-tap-highlight-color: transparent;
+
+    transition:
+        background 0.15s ease,
+        transform 0.15s ease;
+}
+
+
+.profile-action-button:active {
+    transform: scale(0.98);
+
+    background: #222222;
+}
+
+/* =========================================================
+   SECTION 10
+   PROFILE CONTENT TABS
+========================================================= */
+
+.profile-action-bar {
+    position: fixed;
+
+    top: 409px;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+    height: 40px;
+    min-height: 40px;
+    max-height: 40px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-around;
+
+    background:
+        linear-gradient(
+            180deg,
+            #111111 0%,
+            #0c0c0c 100%
+        );
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.055);
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.055);
+
+    z-index: 20;
+}
+
+
+.profile-tab-button {
+    position: relative;
+
+    width: 33.333%;
+
+    height: 40px;
+
+    padding: 0;
+
+    border: 0;
+
+    outline: none;
+
+    background: transparent;
+
+    color:
+        rgba(255, 255, 255, 0.55);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+.profile-tab-button.active {
+    color: #ffffff;
+}
+
+
+.profile-tab-button.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 25%;
+    right: 25%;
+
+    bottom: 0;
+
+    height: 2px;
+
+    background: #ffffff;
+
+    border-radius: 2px;
+}
+
+
+.profile-tab-button:active {
+    transform: scale(0.97);
+}
+
+/* =========================================================
+   SECTION 11
+   PROFILE TAB CONTENT BOXES
+========================================================= */
+
+.profile-tab-content {
+    position: fixed;
+
+    top: 459px;
+    left: 12px;
+    right: 12px;
+    bottom: 10px;
+
+    width: auto;
+
+    display: none;
+
+    overflow: hidden;
+
+    padding: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #151515 0%,
+            #0d0d0d 100%
+        );
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.06);
+
+    border-radius: 10px;
+
+    color: #ffffff;
+
+    z-index: 10;
+}
+
+
+.profile-tab-content.active {
+    display: block;
+}
+
+
+/* =========================================================
+   SECTION 12
+   INNER POST / REEL SCROLL AREA
+========================================================= */
+
+.profile-scroll-content {
+    width: 100%;
+    height: 100%;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    padding: 12px;
+
+    scrollbar-width: none;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+
+.profile-scroll-content::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+
+/* =========================================================
+   SECTION 13
+   PROFILE BOX PLACEHOLDER
+========================================================= */
+
+.profile-box-placeholder {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    color:
+        rgba(255, 255, 255, 0.35);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    pointer-events: none;
+}
+
+
+.profile-tab-content.has-content
+.profile-box-placeholder {
+    display: none;
+}
+
+/* =========================================================
+   SECTION 14
+   PROFILE BOTTOM EMPTY BAR
+========================================================= */
+
+.profile-bottom-bar {
+    position: fixed;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 40px;
+
+    background: #111111;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    z-index: 100;
+}
+
+
+/* =========================================================
+   SECTION 15
+   PROFILE BOTTOM NAVIGATION
+========================================================= */
+
+.profile-bottom-navigation {
+    position: fixed;
+
+    left: 0;
+    right: 0;
+    bottom: 40px;
+
+    width: 100%;
+    height: 40px;
+
+    padding: 0;
+    margin: 0;
+
+    background: #0c0c0c;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    z-index: 101;
+}
+
+
+/* =========================================================
+   SECTION 16
+   FIXED NAVIGATION BUTTONS
+========================================================= */
+
+.profile-bottom-button {
+    position: absolute;
+
+    top: 0;
+
+    width: 20%;
+    height: 40px;
+
+    padding: 0;
+    margin: 0;
+
+    border: 0;
+    outline: none;
+
+    background: transparent;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    transform: none !important;
+
+    transition: none !important;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   EXACT ICON POSITIONS
+========================================================= */
+
+#profileNavHome {
+    left: 0%;
+}
+
+#profileNavSearch {
+    left: 20%;
+}
+
+#profileNavMessage {
+    left: 40%;
+}
+
+#profileNavReel {
+    left: 60%;
+}
+
+#profileNavProfile {
+    left: 80%;
+}
+
+
+/* =========================================================
+   NO TAP MOVEMENT
+========================================================= */
+
+.profile-bottom-button:active,
+.profile-bottom-button:focus,
+.profile-bottom-button:hover {
+    transform: none !important;
+}
+
+
+/* =========================================================
+   SECTION 17
+   PROFILE NAVIGATION ICON
+========================================================= */
+
+.profile-nav-svg {
+    width: 21px;
+    height: 21px;
+
+    fill: none;
+
+    stroke:
+        rgba(255, 255, 255, 0.68);
+
+    stroke-width: 1.8;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+    transition:
+        stroke 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.profile-bottom-button.active
+.profile-nav-svg {
+    stroke: #ffffff;
+}
+
+/* =========================================================
+   SECTION 8
+   SUBTLE DARK BACKGROUND
+========================================================= */
+
+.profile-content::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            circle at 50% 25%,
+            rgba(229, 177, 62, 0.018) 0%,
+            rgba(229, 177, 62, 0.006) 28%,
+            rgba(229, 177, 62, 0) 60%
+        );
+
+    z-index: 0;
+}
+
+
+/* =========================================================
+   SECTION 9
+   SAFE AREA SUPPORT
+========================================================= */
+
+.profile-page {
+    padding-top:
+        env(safe-area-inset-top);
+}
+
+
+.profile-top-bar {
+    top:
+        env(safe-area-inset-top);
+}
+
+
+.profile-second-bar {
+    top:
+        calc(
+            50px +
+            env(safe-area-inset-top)
+        );
+}
+
+
+.profile-content {
+    top:
+        calc(
+            100px +
+            env(safe-area-inset-top)
+        );
+
+    height:
+        calc(
+            100dvh -
+            100px -
+            env(safe-area-inset-top)
+        );
+}
+
+
+/* =========================================================
+   SECTION 10
+   ELEMENT SELECTION CONTROL
+========================================================= */
+
+.profile-page,
+.profile-page * {
+    -webkit-user-select: none;
+
+    user-select: none;
+
+    -webkit-touch-callout: none;
+}
+
+
+/* =========================================================
+   SECTION 11
+   SCROLLBAR CONTROL
+========================================================= */
+
+.profile-page::-webkit-scrollbar,
+.profile-content::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+
+.profile-page,
+.profile-content {
+    scrollbar-width: none;
+}
+
+
+/* =========================================================
+   SECTION 12
+   SMALL MOBILE DEVICES
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .profile-top-bar {
+        height: 50px;
+
+        min-height: 50px;
+        max-height: 50px;
+    }
+
+
+    .profile-second-bar {
+        height: 50px;
+
+        min-height: 50px;
+        max-height: 50px;
+    }
+
+
+    .profile-app-icon {
+        left: 12px;
+
+        width: 34px;
+        height: 34px;
+    }
+
+
+    .profile-username {
+        left: 56px;
+
+        font-size: 16px;
+    }
+
+}
+
+
+/* =========================================================
+   SECTION 13
+   VERY SMALL MOBILE DEVICES
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .profile-top-bar {
+        height: 50px;
+    }
+
+
+    .profile-second-bar {
+        height: 50px;
+    }
+
+
+    .profile-app-icon {
+        left: 10px;
+
+        width: 32px;
+        height: 32px;
+    }
+
+
+    .profile-username {
+        left: 52px;
+
+        font-size: 15px;
+    }
+
+}
+
+
+/* =========================================================
+   SECTION 14
+   TABLET AND LARGE SCREENS
+========================================================= */
+
+@media (min-width: 768px) {
+
+    .profile-top-bar {
+        height: 50px;
+    }
+
+
+    .profile-second-bar {
+        height: 50px;
+    }
+
+
+    .profile-app-icon {
+        left: 14px;
+
+        width: 36px;
+        height: 36px;
+    }
+
+
+    .profile-username {
+        left: 62px;
+
+        font-size: 17px;
+    }
+
+}
+
+
+/* =========================================================
+   SECTION 15
+   LANDSCAPE MOBILE
+========================================================= */
+
+@media (
+    orientation: landscape
+) and (
+    max-height: 500px
+) {
+
+    .profile-top-bar {
+        height: 50px;
+    }
+
+
+    .profile-second-bar {
+        height: 50px;
+    }
+
+
+    .profile-app-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+
+    .profile-username {
+        font-size: 15px;
+    }
+
+}
+
+
+/* =========================================================
+   SECTION 16
+   FINAL PROFILE STATE
+========================================================= */
+
+#profilePage {
+    opacity: 1;
+
+    visibility: visible;
+
+    background: #080808;
+}
+
+
+#profileTopBar {
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+#profileSecondBar {
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+#profileContent {
+    opacity: 1;
+
+    visibility: visible;
+}

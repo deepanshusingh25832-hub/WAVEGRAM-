@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>WAVEGRAM - Edit Profile</title>
+
+    <link
+        rel="stylesheet"
+        href="css/edit-profile.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     SECTION 1
+     EDIT PROFILE PAGE
+========================================================= -->
+
+<div
+    id="editProfilePage"
+    class="edit-profile-page"
+>
+
+
+    <!-- =====================================================
+         SECTION 2
+         TOP 50PX BAR
+    ====================================================== -->
+
+    <div
+        id="editProfileTopBar"
+        class="edit-profile-top-bar"
+    ></div>
+    
+<!-- =====================================================
+     SECTION 3
+     SECOND 40PX BAR
+====================================================== -->
+
+<div
+    id="editProfileSecondBar"
+    class="edit-profile-second-bar"
+>
+
+    <button
+        id="editProfileBackButton"
+        class="edit-profile-back-button"
+        type="button"
+        aria-label="Back"
+    >
+
+        <span
+            class="edit-profile-back-arrow"
+        ></span>
+
+    </button>
+
+
+    <span
+        class="edit-profile-title"
+    >
+        Edit Profile
+    </span>
+
+</div>
+
+<!-- =====================================================
+     SECTION 4
+     EDIT PROFILE MAIN BOX
+====================================================== -->
+
+<div
+    id="editProfileMainBox"
+    class="edit-profile-main-box"
+>
+
+
+    <!-- =================================================
+         PROFILE FORM
+    ================================================== -->
+
+    <div
+        class="edit-profile-form"
+    >
+
+
+        <!-- NAME -->
+
+        <div
+            class="edit-profile-field"
+        >
+
+            <label
+                for="editProfileName"
+            >
+                Name
+            </label>
+
+            <input
+                id="editProfileName"
+                type="text"
+                placeholder="Enter name"
+                autocomplete="name"
+            >
+
+        </div>
+
+
+        <!-- USERNAME -->
+
+        <div
+            class="edit-profile-field"
+        >
+
+            <label
+                for="editProfileUsername"
+            >
+                Username
+            </label>
+
+            <input
+                id="editProfileUsername"
+                type="text"
+                placeholder="Enter username"
+                autocomplete="username"
+            >
+
+        </div>
+
+
+        <!-- GMAIL -->
+
+        <div
+            class="edit-profile-field"
+        >
+
+            <label
+                for="editProfileGmail"
+            >
+                Gmail
+            </label>
+
+            <input
+                id="editProfileGmail"
+                type="email"
+                placeholder="Enter Gmail"
+                autocomplete="email"
+            >
+
+        </div>
+
+
+        <!-- PASSWORD -->
+
+        <div
+            class="edit-profile-field"
+        >
+
+            <label
+                for="editProfilePassword"
+            >
+                Password
+            </label>
+
+            <input
+                id="editProfilePassword"
+                type="password"
+                placeholder="Enter password"
+                autocomplete="new-password"
+            >
+
+        </div>
+
+
+        <!-- CONFIRM PASSWORD -->
+
+        <div
+            class="edit-profile-field"
+        >
+
+            <label
+                for="editProfileConfirmPassword"
+            >
+                Confirm Password
+            </label>
+
+            <input
+                id="editProfileConfirmPassword"
+                type="password"
+                placeholder="Confirm password"
+                autocomplete="new-password"
+            >
+
+        </div>
+
+
+        <!-- BIO -->
+
+        <div
+            class="edit-profile-field"
+        >
+
+            <label
+                for="editProfileBio"
+            >
+                Bio
+            </label>
+
+            <textarea
+                id="editProfileBio"
+                placeholder="Write your bio"
+                rows="3"
+            ></textarea>
+
+        </div>
+
+
+        <!-- CHOICE DP -->
+
+        <div
+            class="edit-profile-choice-section"
+        >
+
+            <label>
+                Choice DP
+            </label>
+
+            <button
+                id="editProfileDpButton"
+                class="edit-profile-choice-button"
+                type="button"
+            >
+                Choose DP
+            </button>
+
+        </div>
+
+
+        <!-- GIF IMAGE -->
+
+        <div
+            class="edit-profile-choice-section"
+        >
+
+            <label>
+                GIF Image
+            </label>
+
+            <button
+                id="editProfileGifButton"
+                class="edit-profile-choice-button"
+                type="button"
+            >
+                Choose GIF
+            </button>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- =================================================
+         SECTION 5
+         EDIT PROFILE ACTION BAR
+    ================================================== -->
+
+    <div
+        id="editProfileActionBar"
+        class="edit-profile-action-bar"
+    >
+
+        <button
+            id="editProfileCancelButton"
+            class="edit-profile-action-button cancel"
+            type="button"
+        >
+            Cancel
+        </button>
+
+
+        <button
+            id="editProfileUpdateButton"
+            class="edit-profile-action-button update"
+            type="button"
+        >
+            Update
+        </button>
+
+    </div>
+
+
+</div>
+
+
+    <!-- =====================================================
+         SECTION 3
+         EDIT PROFILE CONTENT
+    ====================================================== -->
+
+    <main
+        id="editProfileContent"
+        class="edit-profile-content"
+    >
+
+    </main>
+
+
+</div>
+
+
+<script
+    src="js/edit-profile.js"
+></script>
+
+
+</body>
+
+</html>
